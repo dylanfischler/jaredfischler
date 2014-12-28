@@ -1,3 +1,22 @@
+@media (min-width: 400px) {
+  h1 {
+    color: #fff;
+    font-size: 16px; }
 
+  h2 {
+    color: #fff;
+    font-size: 14px; }
+
+  section#brand .logo {
+    position: absolute;
+    top: 0%;
+    width: 300px;
+    left: 50%;
+    margin-left: -150px;
+    text-align: center;
+    color: #fff; }
+
+  section#bio .bio_content {
+    padding: 50px 20px 0 20px; } }
 
 /*# sourceMappingURL=w400.css.map */

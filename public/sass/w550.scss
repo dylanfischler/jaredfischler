@@ -1,3 +1,23 @@
 @media (min-width: 550px) {
-	
+	section#brand {
+		padding-bottom:200px;
+
+		img#brand_bg {
+			width:100%;
+		}
+		.logo {
+			position:absolute;
+			top:0%;
+			width:345px;
+			left:50%;
+			margin-left:-172px;
+			text-align:center;
+			color:#fff;
+
+			img {
+				width: 345px;
+				height:238px;
+			}
+		}
+	}
 }

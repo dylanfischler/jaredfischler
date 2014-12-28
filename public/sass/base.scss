@@ -9,6 +9,24 @@
 
 body {
 	background: #0d0d0d no-repeat;
+	font-family: "Century Gothic", "Merriweather", serif;
+}
+
+h1 {
+	color: #fff;
+	font-size: 13px; 
+	font-weight: 100;
+	text-transform: uppercase;
+	letter-spacing:0.2em;
+	line-height:1.6em;
+}
+h2 {
+	color: #fff;
+	font-size:10px;
+	text-transform: uppercase;
+	font-weight: 100;
+	letter-spacing:0.2em;
+	line-height:1.6em;
 }
 
 #loading {
@@ -64,8 +82,13 @@ body {
 	}
 }
 
+section {
+	min-height:600px;
+}
 
 section#brand {
+	padding-bottom:200px;
+
 	img#brand_bg {
 		width:100%;
 	}
@@ -77,5 +100,44 @@ section#brand {
 		margin-left:-172px;
 		text-align:center;
 		color:#fff;
+
+		img {
+			width: 300px;
+			height:208px;
+		}
+	}
+}
+
+section#bio {
+	text-align:center;
+
+	.me {
+		width: 150px;
+		height: 150px;
+		margin: 50px;
+		-ms-transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		overflow: hidden;
+		margin:0 auto;
+	}
+
+	.me_img {
+		background: url("../includes/me.jpg") no-repeat;
+		background-size: 225px;
+		width: 225px;
+	  	height: 225px;
+		margin: -35px;
+		-ms-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+	.bio_content {
+		max-width:600px;
+		padding:50px 10px 0 10px;
+		margin:0 auto;
+		h1 {padding-top:10px;}
+		h2 {padding-top:5px;}
 	}
 }

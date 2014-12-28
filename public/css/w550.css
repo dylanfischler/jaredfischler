@@ -1,3 +1,18 @@
-
+@media (min-width: 550px) {
+  section#brand {
+    padding-bottom: 200px; }
+    section#brand img#brand_bg {
+      width: 100%; }
+    section#brand .logo {
+      position: absolute;
+      top: 0%;
+      width: 345px;
+      left: 50%;
+      margin-left: -172px;
+      text-align: center;
+      color: #fff; }
+      section#brand .logo img {
+        width: 345px;
+        height: 238px; } }
 
 /*# sourceMappingURL=w550.css.map */

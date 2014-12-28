@@ -14,5 +14,7 @@ $(document).ready(function(){
 });
 
 Pace.on("done", function(){
-	$("#loading").addClass("done");
+	setTimeout(function(){
+		$("#loading").addClass("done");
+	},1000);
 });
