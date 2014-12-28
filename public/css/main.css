@@ -1,0 +1,16 @@
+@import url(base.css);
+/* Mobile first queries */
+/* Larger than mobile */
+@import url(w400.css);
+/* Larger than phablet */
+@import url(w550.css);
+/* Larger than tablet */
+@import url(w750.css);
+/* Bootstrap mid split */
+@import url(w992.css);
+/* Larger than desktop */
+@import url(w1000.css);
+/* Larger than Desktop HD */
+@import url(w1200.css);
+
+/*# sourceMappingURL=main.css.map */
