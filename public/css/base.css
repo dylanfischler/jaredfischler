@@ -18,6 +18,18 @@ h2 {
   letter-spacing: 0.2em;
   line-height: 1.6em; }
 
+.vim_wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0; }
+  .vim_wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
 #loading {
   position: fixed;
   top: 0px;
@@ -114,5 +126,22 @@ section#bio {
       padding-top: 10px; }
     section#bio .bio_content h2 {
       padding-top: 5px; }
+
+section#reel .title {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  padding: 14px 0 10px 0;
+  width: 200px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto; }
+section#reel .reel_container {
+  text-align: center; }
 
 /*# sourceMappingURL=base.css.map */
