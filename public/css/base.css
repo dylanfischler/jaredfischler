@@ -80,7 +80,22 @@ h2 {
     opacity: 0; }
 
 section {
-  min-height: 600px; }
+  min-height: 600px;
+  text-align: center; }
+  section .title {
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    padding: 14px 0 10px 0;
+    width: 200px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto; }
 
 section#brand {
   padding-bottom: 200px; }
@@ -127,21 +142,23 @@ section#bio {
     section#bio .bio_content h2 {
       padding-top: 5px; }
 
-section#reel .title {
-  text-align: center;
-  color: #fff;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  border-top: 2px solid;
-  border-bottom: 2px solid;
-  padding: 14px 0 10px 0;
-  width: 200px;
-  margin-top: 30px;
-  margin-bottom: 50px;
-  margin-left: auto;
-  margin-right: auto; }
 section#reel .reel_container {
   text-align: center; }
+
+section#projects .row {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center; }
+  section#projects .row .project {
+    height: 300px;
+    background: #3d3d3d;
+    border: 1px solid #555654;
+    padding: 10px;
+    -webkit-transition: background 0.5s ease-out;
+    -moz-transition: background 0.5s ease-out;
+    -o-transition: background 0.5s ease-out;
+    transition: background 0.5s ease-out; }
+    section#projects .row .project:hover {
+      background: #505050; }
 
 /*# sourceMappingURL=base.css.map */

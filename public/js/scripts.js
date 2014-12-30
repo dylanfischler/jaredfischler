@@ -13,11 +13,30 @@ $(document).ready(function(){
 
 });
 
+Pace.on("start", function(){
+	disableScroll();
+});
+
 Pace.on("done", function(){
 	setTimeout(function(){
 		$("#loading").addClass("done");
 		setTimeout(function(){
-			$("#loading").hide();
+			//re-enable scrolling
+			enableScroll();
+			//hide loading screen
+			$("#loading").hide();	
 		},1000);
 	},1000);
 });
+
+//scroll control functions
+function disableScroll(){
+	$('body').on({
+		'mousewheel': function(e){ e.preventDefault(); e.stopPropagation(); }
+	});
+}
+
+function enableScroll(){ 
+	$('body').off('mousewheel');
+}
+
