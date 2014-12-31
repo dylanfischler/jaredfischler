@@ -24,7 +24,7 @@ angular.module("jayrad", [])
 		},
 		{
 			title: "Sketches",
-			imgPath: "includes/categories/Sketches.JPG"
+			imgPath: "includes/categories/Sketches.jpg"
 		},
 
 	]
