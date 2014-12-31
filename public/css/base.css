@@ -126,6 +126,9 @@ section#bio {
     margin: 0 auto; }
   section#bio .me_img {
     background: url("../includes/me.jpg") no-repeat;
+    -webkit-background-size: 225px;
+    -moz-background-size: 225px;
+    -o-background-size: 225px;
     background-size: 225px;
     width: 225px;
     height: 225px;
@@ -151,14 +154,12 @@ section#projects .row {
   text-align: center; }
   section#projects .row .project {
     height: 300px;
-    background: #3d3d3d;
+    background-color: #3d3d3d;
     border: 1px solid #555654;
     padding: 10px;
-    -webkit-transition: background 0.5s ease-out;
-    -moz-transition: background 0.5s ease-out;
-    -o-transition: background 0.5s ease-out;
-    transition: background 0.5s ease-out; }
-    section#projects .row .project:hover {
-      background: #505050; }
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
 
 /*# sourceMappingURL=base.css.map */

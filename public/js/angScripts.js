@@ -1,52 +1,39 @@
 angular.module("jayrad", [])
 
-.controller("Projects", function($scope){
-	$scope.projects = [
+.controller("ProjectsCategories", function($scope){
+	$scope.categories = [
 		{
-			title: "",
-			desc: "",
-			imgPath: ""
+			title: "3D Modeling",
+			imgPath: "includes/categories/3DModel.JPG"
 		},
 		{
-			title: "",
-			desc: "",
-			imgPath: ""
+			title: "Animation",
+			imgPath: "includes/categories/Animation.JPG"
 		},
 		{
-			title: "",
-			desc: "",
-			imgPath: ""
+			title: "Cinematography",
+			imgPath: "includes/categories/Cinematography.JPG"
 		},
 		{
-			title: "",
-			desc: "",
-			imgPath: ""
+			title: "Digital Art",
+			imgPath: "includes/categories/Digital_Art.JPG"
 		},
 		{
-			title: "",
-			desc: "",
-			imgPath: ""
+			title: "Graphic Design",
+			imgPath: "includes/categories/Graphic_Design.png"
 		},
 		{
-			title: "",
-			desc: "",
-			imgPath: ""
-		},
-		{
-			title: "",
-			desc: "",
-			imgPath: ""
-		},
-		{
-			title: "",
-			desc: "",
-			imgPath: ""
-		},
-		{
-			title: "",
-			desc: "",
-			imgPath: ""
+			title: "Sketches",
+			imgPath: "includes/categories/Sketches.JPG"
 		},
 
 	]
+})
+
+.directive('bgImg', function(){
+    return function(scope, element, attrs){
+        attrs.$observe('bgImg', function(imgPath) {
+            element.css({ 'background-image': 'url('+imgPath+')' });
+        });
+    };
 })

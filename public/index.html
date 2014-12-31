@@ -68,10 +68,10 @@
 
     <!-- Fourth Section :: Projects -->
 
-    <section id="projects" ng-controller="Projects">
+    <section id="projects" ng-controller="ProjectsCategories">
         <div class="title">Projects</div>
         <div class="row">
-            <div class="project col-lg-4 col-md-6 col-sm-12" ng-repeat="project in projects">
+            <div class="project col-lg-4 col-md-6 col-sm-12" ng-repeat="category in categories" bg-img="{{category.imgPath}}">
                 
             </div>
         </div>
