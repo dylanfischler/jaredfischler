@@ -11,6 +11,17 @@ $(document).ready(function(){
 			$("section#brand .logo").css("top",(logoHeight + "%"))
 		});
 
+		//category overlay control
+		$(".project_cat").hover(
+			function(e){
+				console.log("hover!");
+				$(this).find(".titleOverlay").addClass("show");
+			}, 
+			function(e){
+				$(this).find(".titleOverlay").removeClass("show");
+			}
+		);
+
 });
 
 Pace.on("start", function(){

@@ -71,7 +71,10 @@
     <section id="projects" ng-controller="ProjectsCategories">
         <div class="title">Projects</div>
         <div class="row">
-            <div class="project col-lg-4 col-md-6 col-sm-12" ng-repeat="category in categories" bg-img="{{category.imgPath}}">
+            <div class="project_cat col-lg-4 col-md-6 col-sm-12" ng-repeat="category in categories" bg-img="{{category.imgPath}}">
+                <div class="titleOverlay">
+                    <div class="c_title"><h2>{{category.title}}</h2></div>
+                </div>
                 
             </div>
         </div>

@@ -190,16 +190,17 @@ section#reel {
 }
 
 section#projects {
+	padding-bottom:200px;
 	.row {
 		max-width:1000px;
 		margin:0 auto;
 		text-align: center;
 
-		.project {
+		.project_cat {
 			height:300px;
 			background-color:#3d3d3d;
-			border: 1px solid rgb(85, 86, 84);
-			padding:10px;
+			border: none;
+			padding:0px;
 			@include backgroundSize(cover);
 			// -webkit-transition: background 0.5s ease-out;
 			// -moz-transition: background 0.5s ease-out;
@@ -209,6 +210,29 @@ section#projects {
 			// &:hover {
 			// 	background:#505050;
 			// }
+
+			.titleOverlay {
+				width:100%;
+				height:100%;
+				background-color: rgba(0,0,0,0.8);
+				color: #fff;
+				opacity:0;
+				-webkit-transition: opacity 0.3s ease-out;
+				-moz-transition: opacity 0.3s ease-out;
+				-o-transition: opacity 0.3s ease-out;
+				transition: opacity 0.3s ease-out;
+				cursor: pointer;
+
+				&.show {opacity: 1;}
+
+				.c_title { 
+					@include vertical-align;
+					h2 {
+						margin:0px;
+						padding:0px;
+					}
+				}
+			}
 		}
 	}
 	

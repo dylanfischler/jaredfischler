@@ -148,18 +148,42 @@ section#bio {
 section#reel .reel_container {
   text-align: center; }
 
-section#projects .row {
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center; }
-  section#projects .row .project {
-    height: 300px;
-    background-color: #3d3d3d;
-    border: 1px solid #555654;
-    padding: 10px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
+section#projects {
+  padding-bottom: 200px; }
+  section#projects .row {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center; }
+    section#projects .row .project_cat {
+      height: 300px;
+      background-color: #3d3d3d;
+      border: none;
+      padding: 0px;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; }
+      section#projects .row .project_cat .titleOverlay {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        opacity: 0;
+        -webkit-transition: opacity 0.3s ease-out;
+        -moz-transition: opacity 0.3s ease-out;
+        -o-transition: opacity 0.3s ease-out;
+        transition: opacity 0.3s ease-out;
+        cursor: pointer; }
+        section#projects .row .project_cat .titleOverlay.show {
+          opacity: 1; }
+        section#projects .row .project_cat .titleOverlay .c_title {
+          position: relative;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+          section#projects .row .project_cat .titleOverlay .c_title h2 {
+            margin: 0px;
+            padding: 0px; }
 
 /*# sourceMappingURL=base.css.map */
