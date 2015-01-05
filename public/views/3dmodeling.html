@@ -1,0 +1,14 @@
+<link rel="stylesheet" type="text/css" href="css/category.css" media="screen" />
+
+<div class="cat_wrap">
+	<h1>3D Modeling</h1>
+	<h2>{{testVariable}}</h2>
+	
+	<div class="row">
+		<div class="project_cat col-lg-4 col-md-6 col-sm-12" bg-img="{{category.imgPath}}" ng-repeat="category in categories" ng-click="changeView(category.route)">
+            <div class="titleOverlay">
+                <div class="c_title"><h2>{{category.title}}</h2></div>
+            </div>
+        </div>
+	</div>
+</div>

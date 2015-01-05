@@ -1,39 +1,65 @@
-angular.module("jayrad", [])
+var app = angular.module("jayrad", ["ngRoute"]);
 
-.controller("ProjectsCategories", function($scope){
-	$scope.categories = [
-		{
-			title: "3D Modeling",
-			imgPath: "includes/categories/3DModel.JPG"
-		},
-		{
-			title: "Animation",
-			imgPath: "includes/categories/Animation.JPG"
-		},
-		{
-			title: "Cinematography",
-			imgPath: "includes/categories/Cinematography.JPG"
-		},
-		{
-			title: "Digital Art",
-			imgPath: "includes/categories/Digital_Art.JPG"
-		},
-		{
-			title: "Graphic Design",
-			imgPath: "includes/categories/Graphic_Design.png"
-		},
-		{
-			title: "Sketches",
-			imgPath: "includes/categories/Sketches.jpg"
-		},
+// data 
+var categories = [
+	{
+		title: "3D Modeling",
+		imgPath: "includes/categories/3DModel.JPG",
+		route: "3dmodeling",
+		controller: "3dmodelingController"
+	},
+	{
+		title: "Animation",
+		imgPath: "includes/categories/Animation.JPG",
+		route: "animation",
+		controller: "AnimationController"
+	},
+	{
+		title: "Cinematography",
+		imgPath: "includes/categories/Cinematography.JPG",
+		route: "cinematography",
+		controller: "CinematographyController"
+	},
+	{
+		title: "Digital Art",
+		imgPath: "includes/categories/Digital_Art.JPG",
+		route: "digitalart",
+		controller: "DigitalartController"
+	},
+	{
+		title: "Graphic Design",
+		imgPath: "includes/categories/Graphic_Design.png",
+		route: "graphicdesign",
+		controller: "GraphicdesignController"
+	},
+	{
+		title: "Sketches",
+		imgPath: "includes/categories/Sketches.jpg",
+		route: "sketches",
+		controller: "SketchesController"
+	},
+];
 
-	]
-})
+app.config(['$routeProvider', '$locationProvider',
+	function($routeProvider) {
+		//root
+		$routeProvider.when('/', { 
+			templateUrl: 'views/home.html',
+			controller: 'HomeController'
+		});
 
-.directive('bgImg', function(){
-    return function(scope, element, attrs){
-        attrs.$observe('bgImg', function(imgPath) {
-            element.css({ 'background-image': 'url('+imgPath+')' });
-        });
-    };
-})
+		angular.forEach(categories, function(value, key){
+			$routeProvider.when("/"+value.route, {templateUrl: "views/category.html", controller: value.controller});
+		});
+
+		$routeProvider.otherwise({ redirectTo: '/' })
+	}
+]);
+
+app.controller("HomeController", function($scope){
+	$scope.categories = categories;
+});
+
+app.controller("CategoryController", function($scope){
+	
+});

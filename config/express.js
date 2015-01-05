@@ -1,4 +1,4 @@
-'use strict';
+	'use strict';
 
 /**
  * Module dependencies.
@@ -18,6 +18,10 @@ var fs = require('fs'),
 	flash = require('connect-flash'),
 	consolidate = require('consolidate'),
 	path = require('path');
+
+/* Data Dependencies */
+var categories = require('../data/categories')();
+var projects = require('../data/projects')();
 
 
 module.exports = function() {
@@ -39,10 +43,22 @@ module.exports = function() {
 		res.redirect("/index.html");
 	});
 
+	//routing 
+	app.get("/categories", function(req,res){
+		res.send(categories);
+	});
+
+	app.get("/projects", function(req,res){
+		console.log(req.query);
+	});
+
+
+
+
 	// route configuration
 
-	app.listen(PORT, IP);
-	// app.listen(3000);
+	// app.listen(PORT, IP);
+	app.listen(3000);
 
 	return app;
 };
