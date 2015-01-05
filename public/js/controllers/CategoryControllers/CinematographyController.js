@@ -1,16 +1,8 @@
-app.controller("CinematographyController", function($scope){
+app.controller("CinematographyController", function($scope, $http){
 	$scope.title = "Cinematography";
 
-	$scope.projects = [
-		{
-			title: "The Study Montage"
-		},
-		{
-			title: "The Forgotten Keys"
-		},
-		{
-			title: "The Date"
-		}
-	];
+	var res = $http.get("/projects", { params: { category: "cinematography" } });
+	res.success(function(data) { $scope.projects = data; });
+    res.error(function(){ console.log("Project Retrieval Error"); });
 
 });

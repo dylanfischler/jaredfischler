@@ -1,21 +1,7 @@
-app.controller("AnimationController", function($scope){
+app.controller("AnimationController", function($scope, $http){
 	$scope.title = "Animation";
 
-	$scope.projects = [
-		{
-			title: "The Voyage | Ch.1: Voyage Begins"
-		},
-		{
-			title: "Why Buy Local?"
-		},
-		{
-			title: "Dream Lapse"
-		},
-		{
-			title: "Birth - The Infant's Discovery of Self"
-		},
-		{
-			title: "The Cubicle"
-		}
-	];
+	var res = $http.get("/projects", { params: { category: "animation" } });
+	res.success(function(data) { $scope.projects = data; });
+    res.error(function(){ console.log("Project Retrieval Error"); });
 });

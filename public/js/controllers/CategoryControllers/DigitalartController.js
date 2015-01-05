@@ -1,24 +1,7 @@
-app.controller("DigitalartController", function($scope){
+app.controller("DigitalartController", function($scope, $http){
 	$scope.title = "Digital Art";
 
-	$scope.projects = [
-		{
-			title: "Palace - Alternative Concept"
-		},
-		{
-			title: "Palce - Concept 3"
-		},
-		{
-			title: "Palace - Concept 2"
-		},
-		{
-			title: "Oasis - Concept 2"
-		},
-		{
-			title: "Palace - Concept 1"
-		},
-		{
-			title: "Oasis - Concept 1"
-		}
-	];
+	var res = $http.get("/projects", { params: { category: "digitalart" } });
+	res.success(function(data) { $scope.projects = data; });
+    res.error(function(){ console.log("Project Retrieval Error"); });
 });

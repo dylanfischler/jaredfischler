@@ -21,7 +21,7 @@ var fs = require('fs'),
 
 /* Data Dependencies */
 var categories = require('../data/categories')();
-var projects = require('../data/projects')();
+var projects = require('../data/projects');
 
 
 module.exports = function() {
@@ -50,15 +50,14 @@ module.exports = function() {
 
 	app.get("/projects", function(req,res){
 		console.log(req.query);
+		res.send(projects.projectsByCategory(req.query.category));
 	});
-
-
 
 
 	// route configuration
 
-	// app.listen(PORT, IP);
-	app.listen(3000);
+	app.listen(PORT, IP);
+	// app.listen(3000);
 
 	return app;
 };

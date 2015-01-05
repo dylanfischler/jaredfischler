@@ -40,6 +40,8 @@ var categories = [
 	},
 ];
 
+
+//route setup
 app.config(['$routeProvider', '$locationProvider',
 	function($routeProvider) {
 		//root
@@ -48,18 +50,18 @@ app.config(['$routeProvider', '$locationProvider',
 			controller: 'HomeController'
 		});
 
+		//category routes
 		angular.forEach(categories, function(value, key){
 			$routeProvider.when("/"+value.route, {templateUrl: "views/category.html", controller: value.controller});
 		});
 
+		//project views
+		$routeProvider.when('/project/:id', {
+			templateUrl: 'views/project.html',
+			controller: 'ProjectController'
+		});
+
+		//fallback redirect
 		$routeProvider.otherwise({ redirectTo: '/' })
 	}
 ]);
-
-app.controller("HomeController", function($scope){
-	$scope.categories = categories;
-});
-
-app.controller("CategoryController", function($scope){
-	
-});

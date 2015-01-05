@@ -1,24 +1,7 @@
-app.controller("SketchesController", function($scope){
+app.controller("SketchesController", function($scope, $http){
 	$scope.title = "Sketches";
 
-	$scope.projects = [
-		{
-			title: "The Puppet"
-		},
-		{
-			title: "Mime"
-		},
-		{
-			title: "Inception Movie Poster"
-		},
-		{
-			title: "Donnie Darko"
-		},
-		{
-			title: "Anthony Hopkins"
-		},
-		{
-			title: "Clint Eastwood"
-		}
-	];
+	var res = $http.get("/projects", { params: { category: "sketches" } });
+	res.success(function(data) { $scope.projects = data; });
+    res.error(function(){ console.log("Project Retrieval Error"); });
 });
