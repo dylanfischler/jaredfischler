@@ -1,9 +1,15 @@
-
 <!-- Logo Placement -->
 <script>
     var logoHeight = Math.floor($(window).width()/30);
     $("section#brand .logo").css("top",(logoHeight + "%"));
 </script>
+
+<!-- Navigation -->
+<div class="nav">
+    <a ng-click="scrollTo('reel')">video reel</a> | 
+    <a ng-click="scrollTo('projects')">work</a> |
+    <a ng-click="scrollTo('contact')">contact</a>
+</div>
 
 <!-- First Section :: Introduction -->
 

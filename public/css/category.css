@@ -4,6 +4,11 @@
     text-align: center;
     font-size: 20px;
     padding-bottom: 60px; }
+  .cat_wrap .logo {
+    text-align: center;
+    padding-bottom: 50px; }
+    .cat_wrap .logo img {
+      width: 200px; }
   .cat_wrap .project_cell {
     height: 300px;
     background-color: #3d3d3d;

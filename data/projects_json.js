@@ -4,7 +4,11 @@ module.exports = function(){
 		{
 			title: "Concept Designs for The Voyage",
 			id: "concept_design_for_the_voyage",
-			category: "3dmodeling"
+			category: "3dmodeling",
+			desc: "",
+			detail: "",
+			
+
 		},
 		{
 			title: "Concept Design: Spacecraft",
