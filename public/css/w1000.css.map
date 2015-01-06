@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA,0BAA2B;EAGxB,2BAAI;IACH,KAAK,EAAC,KAAK",
+"sources": ["../sass/w1000.scss"],
 "names": [],
 "file": "w1000.css"
 }

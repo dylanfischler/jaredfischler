@@ -7,10 +7,16 @@ module.exports = {
 		});
 	},
 
-	getProject: function(category, id){
-		return projects.filter(function(el){
-			return ((el.category == category) && (el.id == id));
+	getProject: function(id){
+		var filtered = projects.filter(function(el){
+			return (el.id == id);
 		});
+
+		return filtered[0];
+	},
+
+	allProjects: function(){
+		return projects;
 	}
 
 }

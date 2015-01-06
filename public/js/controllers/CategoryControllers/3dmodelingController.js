@@ -1,4 +1,4 @@
-app.controller("3dmodelingController", function($scope){
+app.controller("3dmodelingController", function($scope, $http){
 	$scope.title = "3D Modeling";
 	
 	var res = $http.get("/projects", { params: { category: "3dmodeling" } });

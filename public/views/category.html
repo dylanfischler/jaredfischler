@@ -2,13 +2,14 @@
     <!-- <div class="logo"><img src="includes/logo.png"/></div> -->
 
     <div class="nav">
-        <a ng-click="goBack()">back</a>
+        <a class="back" ng-click="goBack()"><i class="ion-ios-arrow-back"></i></a>
     </div>
 
 	<h1>{{title}}</h1>
 	
 	<div class="row">
-		<div class="project_cell col-lg-4 col-md-6 col-sm-12" bg-img="{{project.imgPath}}" ng-repeat="project in projects" ng-click="changeView(project.route)">
+		<div class="project_cell col-lg-4 col-md-6 col-sm-12" bg-img="{{project.imgPath}}" ng-repeat="project in projects" ng-click="changeView('/project/'+project.id)">
+
             <div class="titleOverlay">
                 <div class="c_title"><h2>{{project.title}}</h2></div>
             </div>

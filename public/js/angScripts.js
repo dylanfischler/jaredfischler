@@ -1,4 +1,4 @@
-var app = angular.module("jayrad", ["ngRoute"]);
+var app = angular.module("jayrad", ["ngRoute", "ngTouch", "ngAnimate"]);
 
 // data 
 var categories = [

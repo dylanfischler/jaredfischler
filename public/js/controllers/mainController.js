@@ -1,4 +1,4 @@
-app.controller("mainController", function($scope, $location, $anchorScroll){
+app.controller("mainController", function($scope, $location, $anchorScroll, anchorSmoothScroll){
 	$scope.viewLoading = false;
 
 	$scope.$on('$routeChangeStart', function() {
@@ -13,13 +13,18 @@ app.controller("mainController", function($scope, $location, $anchorScroll){
 		$location.path(route);
 	}
 
-    //anchorScroll fix from slugslog
+    //anchorScroll fix from slugslog -- unused
     $scope.scrollTo = function(id) {
 	    var oldLoc = $location.hash();
 	    $location.hash(id);
 	    $anchorScroll();
 	    $location.hash(oldLoc);
 	};
+
+	$scope.angScroll = function (id){
+    	$location.hash('bottom');
+    	anchorSmoothScroll.scrollTo(id, 50);
+    };
 
 	$scope.goBack = function(){
 		window.history.back();

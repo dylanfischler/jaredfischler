@@ -49,15 +49,19 @@ module.exports = function() {
 	});
 
 	app.get("/projects", function(req,res){
-		console.log(req.query);
-		res.send(projects.projectsByCategory(req.query.category));
+		//specific project requested
+		if(req.query.id) res.send(projects.getProject(req.query.id));
+		//category requested
+		else if(req.query.category) res.send(projects.projectsByCategory(req.query.category));
+		//no parameters
+		else res.send(projects.allProjects());
 	});
 
 
 	// route configuration
 
-	app.listen(PORT, IP);
-	// app.listen(3000);
+	// app.listen(PORT, IP);
+	app.listen(3000);
 
 	return app;
 };

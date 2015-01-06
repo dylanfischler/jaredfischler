@@ -6,9 +6,20 @@
 
 <!-- Navigation -->
 <div class="nav">
-    <a ng-click="scrollTo('reel')">video reel</a> | 
-    <a ng-click="scrollTo('projects')">work</a> |
-    <a ng-click="scrollTo('contact')">contact</a>
+    <a ng-click="angScroll('reel')">video reel</a> | 
+    <a ng-click="angScroll('projects')">work</a> |
+    <a ng-click="angScroll('contact')">contact</a>
+</div>
+<button class="triggerNav" ng-click="nav = !nav">
+    <i class="ion-navicon" ng-show="!nav"></i>
+    <i class="ion-ios-close-empty" ng-show="nav"></i>
+</button>
+<div class="mobileNav slideAnimate" ng-show="nav">
+    <ul>
+        <li><a ng-click="mobileNav('reel')">video reel</a></li>
+        <li><a ng-click="mobileNav('projects')">work</a></li>
+        <li><a ng-click="mobileNav('contact')">contact</a></li>
+    </ul>
 </div>
 
 <!-- First Section :: Introduction -->

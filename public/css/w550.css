@@ -1,4 +1,23 @@
 @media (min-width: 550px) {
+  .nav {
+    display: block;
+    right: 15px;
+    left: none;
+    width: auto;
+    text-align: right; }
+    .nav a:active {
+      background-color: white;
+      color: #000; }
+    .nav a:hover {
+      background-color: white;
+      color: #000; }
+
+  button.triggerNav {
+    display: none; }
+
+  .mobileNav {
+    display: none; }
+
   section#brand {
     padding-bottom: 200px; }
     section#brand img#brand_bg {
@@ -13,6 +32,9 @@
       color: #fff; }
       section#brand .logo img {
         width: 345px;
-        height: 238px; } }
+        height: 238px; }
+
+  .proj_wrap .portraitImg img {
+    width: 50%; } }
 
 /*# sourceMappingURL=w550.css.map */

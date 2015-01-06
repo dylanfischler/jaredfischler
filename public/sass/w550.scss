@@ -1,4 +1,30 @@
 @media (min-width: 550px) {
+	.nav {
+		display: block;
+		right:15px;
+		left: none;
+		width:auto;
+		text-align:right;
+
+		a {
+			&:active {
+				background-color: rgba(255,255,255,1);
+				color: #000;
+			}
+			&:hover {
+				background-color: rgba(255,255,255,1);
+				color: #000;
+			}
+		}
+		
+	}
+	button.triggerNav {
+		display:none;
+	}
+	.mobileNav {
+		display:none;
+	}
+
 	section#brand {
 		padding-bottom:200px;
 
@@ -30,5 +56,12 @@
 			}
 		}
 		
+	}
+	.proj_wrap {
+		.portraitImg {
+			img {
+				width:50%;
+			}
+		}
 	}
 }

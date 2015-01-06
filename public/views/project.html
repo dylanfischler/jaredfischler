@@ -1,3 +1,19 @@
 <div class="proj_wrap">
-	<h1>{{projectID}}</h1>
+	<div class="nav">
+        <a class="back" ng-click="goBack()"><i class="ion-ios-arrow-back"></i></a>
+    </div>
+
+	<div class="mainContent">
+		<div class="landscapeImg htmlEmbed" ng-show="project.mainType == 'landscapeImage' || project.mainType == 'htmlEmbed'">
+			<img ng-src="includes/project_images/{{project.id}}.jpg"/>
+		</div>
+		<div class="portraitImg" ng-show="project.mainType == 'portraitImage'">
+			<img ng-src="includes/project_images/{{project.id}}.jpg"/>
+		</div>
+	</div>
+	<div class="desc">
+		<h1>{{project.title}}</h1>
+		<p>{{project.desc}}</p>
+	</div>
+	
 </div>
