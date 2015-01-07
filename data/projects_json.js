@@ -42,8 +42,8 @@ module.exports = function(){
 			category: "animation",
 			desc: "The start of a journey. Music -- Chord Left - Agnes Obel",
 			mainType: "htmlEmbed",
-			html: '<iframe width="1280" height="720" src="//www.youtube.com/embed/To8wZwBR-xg?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>'
-			addImgs: ["VoyageAlternative1", "VoyageAlternative2", "VoyageAlternative3", "VoyageAlternative4", "VoyageAlternative5", "VoyageAlternative6", "VoyageAlternative7", "VoyageAlternative8", "VoyageAlternative9",
+			html: '<iframe width="1280" height="720" src="//www.youtube.com/embed/To8wZwBR-xg?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>',
+			addImgs: ["VoyageAlternative1", "VoyageAlternative2", "VoyageAlternative3", "VoyageAlternative4", "VoyageAlternative5", "VoyageAlternative6", "VoyageAlternative7", "VoyageAlternative8", "VoyageAlternative9"]
 		},
 		{
 			title: "Why Buy Local?",
@@ -58,7 +58,7 @@ module.exports = function(){
 			id: "dream_lapse",
 			category: "animation",
 			desc: "Experimenting in After-effects with the help of Blockhead. Track: Triptych Pt.3 - Blockhead, Music by Cavelight",
-			mainType: "htmlEmbed"
+			mainType: "htmlEmbed",
 			html: '<iframe src="//player.vimeo.com/video/90440259?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="1280" height="720" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'
 		},
 		{
