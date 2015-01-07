@@ -1,7 +1,20 @@
 <!-- Logo Placement -->
 <script>
-    var logoHeight = Math.floor($(window).width()/30);
-    $("section#brand .logo").css("top",(logoHeight + "%"));
+    $(document).ready(function(){
+        logoHeight = Math.floor($(window).width()/5);
+        $("section#brand .logo").css("top",(logoHeight + "px"));
+
+
+        // var avatar = $(".me_img").offset().top;
+        // console.log("init: " + avatar);
+        // $("section#brand .logo").css("top",((avatar-300) + "px"));
+
+        $(window).resize(function(){
+            logoHeight = Math.floor($(window).width()/5);
+            $("section#brand .logo").css("top",(logoHeight + "px"));
+        });
+    });
+    
 </script>
 
 <!-- Navigation -->
@@ -10,9 +23,9 @@
     <a ng-click="angScroll('projects')">work</a> |
     <a ng-click="angScroll('contact')">contact</a>
 </div>
-<button class="triggerNav" ng-click="nav = !nav">
-    <i class="ion-navicon" ng-show="!nav"></i>
-    <i class="ion-ios-close-empty" ng-show="nav"></i>
+<button class="triggerNav ion-navicon" ng-click="toggleNav()">
+    <!-- <i class="ion-navicon" ng-show="!nav"></i>
+    <i class="ion-ios-close-empty" ng-show="nav"></i> -->
 </button>
 <div class="mobileNav slideAnimate" ng-show="nav">
     <ul>

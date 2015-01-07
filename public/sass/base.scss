@@ -19,10 +19,16 @@
 	border-right: $size solid transparent;
 	border-top: $size solid $color;
 }
-
+html {
+	width:100%;
+	overflow-x:hidden;
+}
 body {
+	position:relative;
 	background: #0d0d0d no-repeat;
 	font-family: "Century Gothic", "Merriweather", serif;
+	width:100%;
+	overflow-x:hidden;
 }
 
 h1 {
@@ -149,19 +155,19 @@ button.triggerNav {
 	right:15px;
 	background:#000;
 	padding:5px 10px;
-	width:40px;
+	width:55px;
 	text-align:center;
 	color: #fff;
 	border:none;
 	outline:none;
 	z-index: 99999999999999999999999;
-	font-size:25px;
+	font-size:30px;
 }
 .mobileNav {
 	position:fixed;
 	top:0px;
 	left:0px;
-	width:80%;
+	width:75%;
 	height:100%;
 	z-index:999999999999999999;
 	background-color: #222;

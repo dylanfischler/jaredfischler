@@ -3,10 +3,10 @@ $(document).ready(function(){
 	//responsive logo height
 		
 		//bind to resize event
-		$(window).resize(function(){
-			logoHeight = Math.floor($(window).width()/30);
-			$("section#brand .logo").css("top",(logoHeight + "%"))
-		});
+		// $(window).resize(function(){
+		// 	logoHeight = Math.floor($(window).width()/30);
+		// 	$("section#brand .logo").css("top",(logoHeight + "%"))
+		// });
 
 	//hide scroll indicator onScroll
 	window.onscroll = function(e){
