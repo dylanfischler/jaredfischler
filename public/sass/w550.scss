@@ -18,6 +18,18 @@
 		}
 		
 	}
+	.mobileNav {
+
+		li {
+
+			a {
+				&:hover {
+					color: #a9a9a9;
+				}
+			}
+		}
+		
+	}
 	button.triggerNav {
 		// display:none;
 	}

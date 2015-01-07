@@ -12,6 +12,9 @@
       background-color: white;
       color: #000; }
 
+  .mobileNav li a:hover {
+    color: #a9a9a9; }
+
   section#brand {
     padding-bottom: 200px; }
     section#brand img#brand_bg {
