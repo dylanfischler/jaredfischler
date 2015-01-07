@@ -1,5 +1,5 @@
-app.controller("ProjectController", ['$scope', '$http', '$routeParams', 
-	function($scope, $http, $routeParams){
+app.controller("ProjectController", ['$scope', '$http', '$routeParams', '$sce', 
+	function($scope, $http, $routeParams, $sce){
 		//get project id from request
 		$scope.projectID = $routeParams.id;
 
@@ -9,6 +9,7 @@ app.controller("ProjectController", ['$scope', '$http', '$routeParams',
 		res.success(function(data, status, headers, config) {
 			console.log(data);
 			$scope.project = data;
+			$scope.project.html = $sce.trustAsHtml($scope.project.html);
 	    });
 	    res.error(function(data, status, headers, config) {
 	        console.log("Project Retrieval Failure");

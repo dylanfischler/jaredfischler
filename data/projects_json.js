@@ -58,7 +58,8 @@ module.exports = function(){
 			id: "birth_the_infants_discovery_of_self",
 			category: "animation",
 			desc: "",
-			mainType: "landscapeImage"
+			mainType: "htmlEmbed",
+			html: '<iframe src="//player.vimeo.com/video/94679492?title=0&amp;byline=0&amp;portrait=0&amp;color=000" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'
 		},
 		{
 			title: "The Cubicle",
