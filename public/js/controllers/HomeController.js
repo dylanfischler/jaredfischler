@@ -6,6 +6,7 @@ app.controller("HomeController", function($scope, $routeParams, $location, ancho
     	$location.hash('bottom');
     	anchorSmoothScroll.scrollTo(id, 50);
     	$scope.nav = false;
+    	$("button.triggerNav").removeClass("ion-ios-close-empty").addClass("ion-navicon");
     }
 
     $scope.toggleNav = function(){
