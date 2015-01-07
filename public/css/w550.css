@@ -1,6 +1,6 @@
 @media (min-width: 550px) {
   .nav {
-    display: block;
+    display: none;
     right: 15px;
     left: none;
     width: auto;
@@ -11,12 +11,6 @@
     .nav a:hover {
       background-color: white;
       color: #000; }
-
-  button.triggerNav {
-    display: none; }
-
-  .mobileNav {
-    display: none; }
 
   section#brand {
     padding-bottom: 200px; }

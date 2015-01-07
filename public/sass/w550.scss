@@ -1,6 +1,6 @@
 @media (min-width: 550px) {
 	.nav {
-		display: block;
+		display: none;
 		right:15px;
 		left: none;
 		width:auto;
@@ -19,10 +19,10 @@
 		
 	}
 	button.triggerNav {
-		display:none;
+		// display:none;
 	}
 	.mobileNav {
-		display:none;
+		// display:none;
 	}
 
 	section#brand {
