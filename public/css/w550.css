@@ -34,7 +34,11 @@
         width: 345px;
         height: 238px; }
 
-  .proj_wrap .portraitImg img {
-    width: 50%; } }
+  .proj_wrap {
+    padding: 50px; }
+    .proj_wrap p {
+      padding: 0px 30px; }
+    .proj_wrap .portraitImg img {
+      width: 50%; } }
 
 /*# sourceMappingURL=w550.css.map */

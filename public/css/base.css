@@ -327,7 +327,7 @@ section#projects {
 
 .proj_wrap {
   text-align: center;
-  padding: 50px; }
+  padding: 20px; }
   .proj_wrap .nav {
     display: initial; }
     .proj_wrap .nav a.back {
@@ -341,7 +341,7 @@ section#projects {
   .proj_wrap p {
     color: #fff;
     font-size: 12px;
-    padding: 0px 30px; }
+    padding: 0px 5px; }
   .proj_wrap .landscapeImg, .proj_wrap .htmlEmbed {
     background: transparent; }
     .proj_wrap .landscapeImg img, .proj_wrap .htmlEmbed img {
