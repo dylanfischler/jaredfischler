@@ -1,4 +1,13 @@
 @media (min-width: 750px) {
+	//links
+	a {
+		&:hover, &:focus, &:active {
+			color: #545251;
+		}
+	}
+
+
+
 	//responsive vimeo wrapper /* css-tricks */
 	.vim_wrap {
 		position: relative;
@@ -14,5 +23,50 @@
 			height: 100%;
 			margin-left:15%;
 		}
+	}
+
+	section#projects {
+		.row {
+			.project_cat {
+
+				.titleOverlay {
+					&:hover {
+						background-color: rgba(0,0,0,0.8);
+						.c_title {
+							h2 {
+								color: #fff;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.cat_wrap {
+
+		.project_cell {
+
+			.titleOverlay {
+
+				&:hover {
+					background-color: rgba(0,0,0,0.8);
+
+					.c_title {
+						h2 {
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	section#resume {
+		object {
+			width:80%;
+			height:1000px;
+		}
+
 	}
 }

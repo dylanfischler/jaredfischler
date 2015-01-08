@@ -1,7 +1,7 @@
 <!-- Logo Placement -->
 <script>
     $(document).ready(function(){
-        logoHeight = Math.floor($(window).width()/5);
+        logoHeight = Math.floor($(window).width()/5)+200;
         $("section#brand .logo").css("top",(logoHeight + "px"));
 
 
@@ -10,7 +10,7 @@
         // $("section#brand .logo").css("top",((avatar-300) + "px"));
 
         $(window).resize(function(){
-            logoHeight = Math.floor($(window).width()/5);
+            logoHeight = Math.floor($(window).width()/5)+200;
             $("section#brand .logo").css("top",(logoHeight + "px"));
         });
     });
@@ -34,6 +34,7 @@
         <li><a ng-click="mobileNav('reel')">video reel</a></li>
         <li><a ng-click="mobileNav('projects')">work</a></li>
         <li><a ng-click="mobileNav('contact')">contact</a></li>
+        <li><a ng-click="mobileNav('resume')">resume</a></li>
     </ul>
 </div>
 
@@ -83,3 +84,33 @@
             </div>
     </div>
 </section>  
+
+<!-- Fifth Section :: Projects -->
+
+<section id="contact">
+    <div class="title">Contact</div>
+    <div class="row">
+        <h2>Email me:</h2>
+        <a href="mailto:jared.fischler@uconn.edu" target="_new">jared.fischler@uconn.edu</a>
+
+        <h2>Connect with me:</h2>
+        <a href="http://www.linkedin.com/in/jaredfischler" target="_new">linkedin.com/in/jaredfischler</a>
+
+        <h2>Follow me:</h2>
+        <a href="http://www.instagram.com/jared_fischler" target="_new">instagram.com/jared_fischler</a>
+
+        <h2>Call me:</h2>
+        <a>203.505.0738</a>
+    </div>
+</section>  
+
+<!-- Sixth Section :: Resume -->
+
+<section id="resume">
+    <div class="title">Resume</div>
+    <div class="row">
+        <object data="includes/RESUMEforweb.pdf" type="application/pdf" width="100%" height="100%">
+            <h2>Looks like your browser isn't able to view PDFs. Click <a href="includes/RESUMEforweb.pdf">here</a> to download it.</h2>
+        </object>
+    </div>
+</section>

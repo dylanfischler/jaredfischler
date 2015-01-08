@@ -25,6 +25,12 @@ h2 {
   letter-spacing: 0.2em;
   line-height: 1.6em; }
 
+a {
+  color: #939393; }
+  a:hover, a:focus, a:active {
+    color: #939393;
+    text-decoration: none; }
+
 .vim_wrap {
   position: relative;
   padding-bottom: 56.25%;
@@ -273,10 +279,6 @@ section#projects {
             -moz-transition: color 0.3s ease-out;
             -o-transition: color 0.3s ease-out;
             transition: color 0.3s ease-out; }
-        section#projects .row .project_cat .titleOverlay:hover {
-          background-color: rgba(0, 0, 0, 0.8); }
-          section#projects .row .project_cat .titleOverlay:hover .c_title h2 {
-            color: #fff; }
 
 .cat_wrap {
   padding: 50px; }
@@ -330,10 +332,6 @@ section#projects {
           -moz-transition: color 0.3s ease-out;
           -o-transition: color 0.3s ease-out;
           transition: color 0.3s ease-out; }
-      .cat_wrap .project_cell .titleOverlay:hover {
-        background-color: rgba(0, 0, 0, 0.8); }
-        .cat_wrap .project_cell .titleOverlay:hover .c_title h2 {
-          color: #fff; }
 
 .proj_wrap {
   text-align: center;
@@ -362,5 +360,8 @@ section#projects {
       padding-top: 50px; }
   .proj_wrap .portraitImg img {
     width: 80%; }
+
+section#resume object {
+  height: 600px; }
 
 /*# sourceMappingURL=base.css.map */
