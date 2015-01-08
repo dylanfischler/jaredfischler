@@ -91,7 +91,7 @@ module.exports = function(){
 			desc: "Experimentation in Cinema 4d and AfterEffects.",
 			mainType: "htmlEmbed",
 			html: '<iframe width="1280" height="720" src="//www.youtube.com/embed/-UlAhTSxWA0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>',
-			addHtml: ['<iframe width="1280" height="720" src="//www.youtube.com/embed/oMJ4KsBzWUA?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>', '<iframe width="1280" height="720" src="//www.youtube.com/embed/8wu3SIAf_PI?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>']
+			addHtml: ['<iframe width="1280" height="720" src="//www.youtube.com/embed/oMJ4KsBzWUA?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>', '<iframe width="1280" height="720" src="//www.youtube.com/embed/AJRABMW7k-k?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>']
 		},
 		//Cinematography
 		{
