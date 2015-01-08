@@ -345,6 +345,8 @@ section#projects {
       width: 40px;
       display: block;
       text-align: center; }
+  .proj_wrap .desc {
+    margin-bottom: 50px; }
   .proj_wrap h1 {
     font-size: 20px;
     padding: 10px 0px; }
@@ -355,8 +357,9 @@ section#projects {
   .proj_wrap .landscapeImg, .proj_wrap .htmlEmbed {
     background: transparent; }
     .proj_wrap .landscapeImg img, .proj_wrap .htmlEmbed img {
-      width: 70%;
-      max-width: 720px; }
+      width: 70%; }
+    .proj_wrap .landscapeImg.additional, .proj_wrap .htmlEmbed.additional {
+      padding-top: 50px; }
   .proj_wrap .portraitImg img {
     width: 80%; }
 

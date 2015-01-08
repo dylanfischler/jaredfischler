@@ -427,14 +427,9 @@ section#projects {
 			text-align: center;
 		}
 	}
-	// .desc {
-	// 	position:fixed;
-	// 	bottom:0px;
-	// 	left:0px;
-	// 	width:100%;
-	// 	background: rgba(0,0,0,0.6);
-	// 	padding:15px;
-	// }
+	.desc {
+		margin-bottom: 50px;
+	}
 
 	h1 {
 		font-size:20px;
@@ -452,7 +447,11 @@ section#projects {
 
 		img {
 			width:70%;
-			max-width: 720px;
+			// max-width: 720px;
+		}
+
+		&.additional {
+			padding-top: 50px;
 		}
 	}
 	.portraitImg {

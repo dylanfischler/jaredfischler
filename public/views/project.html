@@ -2,24 +2,35 @@
 	<div class="nav">
         <a class="back" ng-click="goBack()"><i class="ion-ios-arrow-back"></i></a>
     </div>
-
+    <div class="desc">
+		<h1>{{project.title}}</h1>
+		<p>{{project.desc}}</p>
+	</div>
 	<div class="mainContent">
 		<div class="landscapeImg htmlEmbed" ng-show="project.mainType == 'landscapeImage' || project.mainType == 'htmlEmbed'">
 			<img ng-show="project.mainType == 'landscapeImage'" ng-src="includes/project_images/{{project.id}}.jpg"/>
 			
 			<div class="vim_wrap" ng-show="project.mainType == 'htmlEmbed'">
-				<div class="theEmbed" ng-bind-html="project.html">
-				</div>
+				<div class="theEmbed" ng-bind-html="project.html"></div>
 			</div>
-
 		</div>
 		<div class="portraitImg" ng-show="project.mainType == 'portraitImage'">
 			<img ng-src="includes/project_images/{{project.id}}.jpg"/>
 		</div>
+
+		<!-- additional images -->
+		<div class="landscapeImg additional" ng-repeat="image in project.addImgs">
+			<img ng-src="includes/project_images/{{image}}.jpg"/>
+		</div>
+
+		<!-- additional html embeds -->
+		<div class="htmlEmbed additional vim_wrap" ng-repeat="htmlBlock in project.addHtml">
+			<div class="theEmbed" ng-bind-html="htmlBlock"></div>
+		</div>
+
+
+
 	</div>
-	<div class="desc">
-		<h1>{{project.title}}</h1>
-		<p>{{project.desc}}</p>
-	</div>
+	
 	
 </div>
