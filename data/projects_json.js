@@ -107,42 +107,42 @@ module.exports = function(){
 			title: "Palace - Alternative Concept",
 			id: "palace_alternative_concept",
 			category: "digitalart",
-			desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non fermentum risus, commodo aliquet orci. Maecenas in nibh laoreet, vehicula eros eu, tincidunt mi. Aenean vel convallis tortor. Nullam non eros lobortis ipsum efficitur ornare. Nulla eu ultrices libero, ac fermentum sem. Fusce sed aliquet augue, dapibus hendrerit quam. Maecenas sit amet justo quis metus pellentesque vehicula eget auctor orci. Ut ac tellus pulvinar, lobortis nisi condimentum, pharetra nulla. Pellentesque ut quam non lectus ornare blandit quis sed purus. Mauris elementum ligula turpis, ut dictum justo semper sit amet.",
+			desc: "An alternative concept for the antagonist's palace. Designed for a Broadway set. ",
 			mainType: "landscapeImage"
 		},
 		{
 			title: "Palace - Concept 3",
 			id: "palace_concept3",
 			category: "digitalart",
-			desc: "",
+			desc: "The final concept for the antagonist's palace. Designed for a Broadway set.",
 			mainType: "landscapeImage"
 		},
 		{
 			title: "Palace - Concept 2",
 			id: "palace_concept2",
 			category: "digitalart",
-			desc: "",
+			desc: "An earlier iteration of the antagonist's palace. Designed for a Broadway set.",
+			mainType: "landscapeImage"
+		},
+		{
+			title: "Palace - Original Concept",
+			id: "palace_concept1",
+			category: "digitalart",
+			desc: "The original concept for the antagonist's palace. Designed for a Broadway set.",
+			mainType: "landscapeImage"
+		},
+		{
+			title: "Oasis - Original Concept",
+			id: "oasis_concept1",
+			category: "digitalart",
+			desc: "The original concept for an oasis scene. Designed for a Broadway set.",
 			mainType: "landscapeImage"
 		},
 		{
 			title: "Oasis - Concept 2",
 			id: "oasis_concept2",
 			category: "digitalart",
-			desc: "",
-			mainType: "landscapeImage"
-		},
-		{
-			title: "Palace - Concept 1",
-			id: "palace_concept1",
-			category: "digitalart",
-			desc: "",
-			mainType: "landscapeImage"
-		},
-		{
-			title: "Oasis - Concept 1",
-			id: "oasis_concept1",
-			category: "digitalart",
-			desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non fermentum risus, commodo aliquet orci. Maecenas in nibh laoreet, vehicula eros eu, tincidunt mi. Aenean vel convallis tortor. Nullam non eros lobortis ipsum efficitur ornare. Nulla eu ultrices libero, ac fermentum sem. Fusce sed aliquet augue, dapibus hendrerit quam. Maecenas sit amet justo quis metus pellentesque vehicula eget auctor orci. Ut ac tellus pulvinar, lobortis nisi condimentum, pharetra nulla. Pellentesque ut quam non lectus ornare blandit quis sed purus. Mauris elementum ligula turpis, ut dictum justo semper sit amet.",
+			desc: "The final concept design for an oasis scene. Designed for a Broadway set.",
 			mainType: "landscapeImage"
 		},
 		//Graphic Design
@@ -150,15 +150,16 @@ module.exports = function(){
 			title: "Font Design - Dystopian",
 			id: "font_design_dystopian",
 			category: "graphicdesign",
-			desc: "",
+			desc: "A font whose chaotic tendencies are reminiscent of dystopian literature.",
 			mainType: "landscapeImage"
 		},
 		{
 			title: "Helvetica Poster Series",
 			id: "helvetica_poster_series",
 			category: "graphicdesign",
-			desc: "",
-			mainType: "landscapeImage"
+			desc: "A poster series inspired by the movie \"Helvetica\".",
+			mainType: "landscapeImage",
+			addImgs: ["HelveticaAlternative1", "HelveticaAlternative2", "HelveticaAlternative3"]
 		},
 		//Sketches
 		{
@@ -199,6 +200,20 @@ module.exports = function(){
 		{
 			title: "Clint Eastwood",
 			id: "clint_eastwood",
+			category: "sketches",
+			desc: "",
+			mainType: "portraitImage"
+		},
+		{
+			title: "Man in Suit",
+			id: "man_in_suit",
+			category: "sketches",
+			desc: "",
+			mainType: "portraitImage"
+		},
+		{
+			title: "Character Sketches",
+			id: "character_sketches",
 			category: "sketches",
 			desc: "",
 			mainType: "portraitImage"
