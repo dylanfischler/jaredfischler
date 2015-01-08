@@ -40,7 +40,7 @@ module.exports = function(){
 			category: "3dmodeling",
 			desc: "Results from various experiments in Cinema4d.",
 			mainType: "landscapeImage",
-			addImgs: [
+			addImgs: []
 		},
 		//Animation
 		{
