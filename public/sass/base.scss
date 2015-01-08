@@ -48,6 +48,16 @@ h2 {
 	line-height:1.6em;
 }
 
+//links
+a {
+	color: #939393;
+
+	&:hover, &:focus, &:active {
+		color: #939393;
+		text-decoration:none;
+	}
+}
+
 //responsive vimeo wrapper /* css-tricks */
 .vim_wrap {
 	position: relative;
@@ -328,15 +338,7 @@ section#projects {
 						transition: color 0.3s ease-out;
 					}
 				}
-				&:hover {
-					background-color: rgba(0,0,0,0.8);
-
-					.c_title {
-						h2 {
-							color: #fff;
-						}
-					}
-				}
+				
 			}
 		}
 	}
@@ -402,15 +404,7 @@ section#projects {
 					transition: color 0.3s ease-out;
 				}
 			}
-			&:hover {
-				background-color: rgba(0,0,0,0.8);
-
-				.c_title {
-					h2 {
-						color: #fff;
-					}
-				}
-			}
+			
 		}
 	}
 }
@@ -460,5 +454,12 @@ section#projects {
 			width:80%;
 		}
 	}
+}
+
+section#resume {
+	object {
+		height:600px;
+	}
+
 }
 
