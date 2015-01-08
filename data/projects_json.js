@@ -16,7 +16,7 @@ module.exports = function(){
 			category: "3dmodeling",
 			desc: "In preparation for a new chapter of The Voyage, I have started to conceptualize what creatures may populate the environments and what those environments may look like.",
 			mainType: "landscapeImage",
-			addImgs: ["ConceptAlternative1", "ConceptAlternative2", "ConceptAlternative3"]
+			addImgs: ["ConceptAlternative1", "ConceptAlternative2", "ConceptAlternative3", "ConceptAlternative4", "ConceptAlternative5"]
 		},
 		{
 			title: "Concept Design: Spacecraft",
@@ -25,7 +25,6 @@ module.exports = function(){
 			desc: "A spacecraft concept for The Voyage",
 			mainType: "landscapeImage",
 			addImgs: ["SpacecraftAlternative1", "SpacecraftAlternative2"]
-
 		},
 		{
 			title: "Plate Camera",
@@ -34,6 +33,14 @@ module.exports = function(){
 			desc: "A Plate Camera. Modeled, textured, and lit in Cinema 4d.",
 			mainType: "landscapeImage",
 			addImgs: ["CameraAlternative1", "CameraAlternative2", "CameraAlternative3", "CameraAlternative4"]
+		},
+		{
+			title: "Experiments",
+			id: "experiments",
+			category: "3dmodeling",
+			desc: "Results from various experiments in Cinema4d.",
+			mainType: "landscapeImage",
+			addImgs: [
 		},
 		//Animation
 		{
