@@ -84,6 +84,15 @@ module.exports = function(){
 			mainType: "htmlEmbed",
 			html: '<iframe src="//player.vimeo.com/video/94576283?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="1280" height="720" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'
 		},
+		{
+			title: "Animation Experiments",
+			id: "animation_experiments",
+			category: "animation",
+			desc: "Experimentation in Cinema 4d and AfterEffects.",
+			mainType: "htmlEmbed",
+			html: '<iframe width="1280" height="720" src="//www.youtube.com/embed/-UlAhTSxWA0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>',
+			addHtml: ['<iframe width="1280" height="720" src="//www.youtube.com/embed/oMJ4KsBzWUA?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>', '<iframe width="1280" height="720" src="//www.youtube.com/embed/8wu3SIAf_PI?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>']
+		},
 		//Cinematography
 		{
 			title: "The Study Montage",
