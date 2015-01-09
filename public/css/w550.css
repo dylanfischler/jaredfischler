@@ -36,6 +36,9 @@
     .proj_wrap p {
       padding: 0px 30px; }
     .proj_wrap .portraitImg img {
-      width: 50%; } }
+      width: 50%; }
+
+  section#education .content, section#skills .content {
+    width: 500px; } }
 
 /*# sourceMappingURL=w550.css.map */

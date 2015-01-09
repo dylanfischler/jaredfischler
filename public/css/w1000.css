@@ -1,5 +1,8 @@
 @media (min-width: 1000px) {
   .proj_wrap .portraitImg img {
-    width: 400px; } }
+    width: 400px; }
+
+  section#education .content, section#skills .content {
+    width: 1000px; } }
 
 /*# sourceMappingURL=w1000.css.map */

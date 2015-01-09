@@ -361,7 +361,30 @@ section#projects {
   .proj_wrap .portraitImg img {
     width: 80%; }
 
-section#resume object {
-  height: 600px; }
+section#education .content, section#skills .content {
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  width: 100%; }
+  section#education .content h3, section#skills .content h3 {
+    font-size: 17px;
+    color: #fff;
+    text-transform: uppercase; }
+  section#education .content h4, section#skills .content h4 {
+    font-size: 14px;
+    color: #838383;
+    padding-bottom: 20px;
+    line-height: 1.5em; }
+  section#education .content .row, section#skills .content .row {
+    margin: 0px;
+    margin-bottom: 10px; }
+  section#education .content .item, section#skills .content .item {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding-right: 10px; }
+
+section#education .content {
+  padding: 50px 20px; }
 
 /*# sourceMappingURL=base.css.map */

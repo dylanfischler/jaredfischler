@@ -1,7 +1,7 @@
 <!-- Logo Placement -->
 <script>
     $(document).ready(function(){
-        logoHeight = Math.floor($(window).width()/5)+200;
+        logoHeight = Math.floor($(window).width()/5)+0;
         $("section#brand .logo").css("top",(logoHeight + "px"));
 
 
@@ -10,7 +10,7 @@
         // $("section#brand .logo").css("top",((avatar-300) + "px"));
 
         $(window).resize(function(){
-            logoHeight = Math.floor($(window).width()/5)+200;
+            logoHeight = Math.floor($(window).width()/5)+0;
             $("section#brand .logo").css("top",(logoHeight + "px"));
         });
     });
@@ -33,8 +33,9 @@
     <ul>
         <li><a ng-click="mobileNav('reel')">video reel</a></li>
         <li><a ng-click="mobileNav('projects')">work</a></li>
+        <li><a ng-click="mobileNav('education')">education</a></li>
+        <li><a ng-click="mobileNav('skills')">skills</a></li>
         <li><a ng-click="mobileNav('contact')">contact</a></li>
-        <li><a ng-click="mobileNav('resume')">resume</a></li>
     </ul>
 </div>
 
@@ -54,7 +55,7 @@
         <div class="me_img"></div>
     </div>
     <div class="bio_content">
-        <h1>I am a sophomore at the University of Connecticut studying Motion Graphics and 3D Visualization.</h1>
+        <h1>I am an artist training in the fields of motion graphics and 3D visualization.</h1>
         <h2>Here is my my work.</h2>
     </div>
 </section>
@@ -83,9 +84,66 @@
                 </div>
             </div>
     </div>
-</section>  
+</section>   
 
-<!-- Fifth Section :: Projects -->
+<!-- Fifth Section :: Education -->
+
+<section id="education">
+    <div class="title">Education</div>
+    <div class="content">
+        <h3>Bachelor of Arts</h3>
+        <h4>Digital Media &amp; Design</h4>
+
+        <h3>Concentration 1</h3>
+        <h4>2D Animation &amp; Motion Graphics</h4>
+
+        <h3>Bachelor of Arts</h3>
+        <h4>Digital Media &amp; Design</h4>
+
+        <h3>Concentration 1</h3>
+        <h4>2D Animation &amp; Motion Graphics</h4>
+
+        <h3>Concentration 2</h3>
+        <h4>3D Animation &amp; Visualization</h4>
+
+        <h3>Concentration 3</h3>
+        <h4>Digital Media &amp; Design</h4>
+
+        <h3>Cumulative GPA</h3>
+        <h4>3.553</h4>
+
+        <h3>Awards</h3>
+        <h4>Deans List(Fall 2013,2014), Fine Arts Talent Scholarship</h4>
+
+        <h3>Relevant Courses</h3>
+        <h4>Animation Lab, Design Process, Motion Graphics I, 3D Animation I, Moving Image &amp; Sequence, 3D Modeling I</h4>
+    </div>
+    
+</section>
+
+<!-- Sixth Section :: Skills -->
+
+<section id="skills">
+    <div class="title">skills</div>
+    <div class="content">
+        
+        <h3>Adobe</h3>
+        <h4>Photoshop, Premiere, Illustrator, InDesign, After Effects</h4>
+        
+        <h3>AutoDesk</h3>
+        <h4>Softimage</h4>
+        
+        <h3>Maxon</h3>
+        <h4>Cinema 4D</h4>
+        
+        <h3>Pilgway Studio</h3>
+        <h4>3D Coat</h4>
+
+    </div>
+    
+</section>
+
+<!-- Seventh Section :: Contact -->
 
 <section id="contact">
     <div class="title">Contact</div>
@@ -98,19 +156,5 @@
 
         <h2>Follow me:</h2>
         <a href="http://www.instagram.com/jared_fischler" target="_new">instagram.com/jared_fischler</a>
-
-        <h2>Call me:</h2>
-        <a>203.505.0738</a>
     </div>
-</section>  
-
-<!-- Sixth Section :: Resume -->
-
-<section id="resume">
-    <div class="title">Resume</div>
-    <div class="row">
-        <object data="includes/RESUMEforweb.pdf" type="application/pdf" width="100%" height="100%">
-            <h2>Looks like your browser isn't able to view PDFs. Click <a href="includes/RESUMEforweb.pdf">here</a> to download it.</h2>
-        </object>
-    </div>
-</section>
+</section> 

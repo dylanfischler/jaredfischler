@@ -1,3 +1,5 @@
-
+@media (min-width: 992px) {
+  section#education .content, section#skills .content {
+    width: 920px; } }
 
 /*# sourceMappingURL=w992.css.map */

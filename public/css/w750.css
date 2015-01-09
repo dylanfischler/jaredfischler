@@ -27,6 +27,9 @@
 
   section#resume object {
     width: 80%;
-    height: 1000px; } }
+    height: 1000px; }
+
+  section#education .content, section#skills .content {
+    width: 700px; } }
 
 /*# sourceMappingURL=w750.css.map */

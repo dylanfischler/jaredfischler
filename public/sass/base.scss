@@ -456,10 +456,43 @@ section#projects {
 	}
 }
 
-section#resume {
-	object {
-		height:600px;
-	}
+section#education, section#skills {
+	.content {
+		margin:0 auto;
+		padding:20px;
+		text-align: center;
+		width:100%;
 
+		h3 {
+			font-size: 17px;
+			color: #fff;
+			text-transform: uppercase;
+		}
+		h4 {
+			font-size: 14px;
+			color: #838383;
+			padding-bottom:20px;
+			line-height: 1.5em;
+		}
+
+		.row {
+			margin:0px;
+			margin-bottom:10px;
+		}
+		.item {
+			color: #fff;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			padding-right:10px;
+		}
+		.detail {
+
+		}
+	}
+}
+section#education {
+	.content {
+		padding:50px 20px;
+	}
 }
 
