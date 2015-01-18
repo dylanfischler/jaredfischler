@@ -11,6 +11,14 @@ module.exports = function(){
 	return [
 		//3D Modeling
 		{
+			title: "Low-Poly Room",
+			id: "Low-poly",
+			category: "3dmodeling",
+			desc: "A low-poly style model of my bedroom.",
+			mainType: "landscapeImage",
+			addImgs: ["Poly1", "Poly2", "Poly3"]
+		},
+		{
 			title: "Concept Designs for The Voyage",
 			id: "concept_design_for_the_voyage",
 			category: "3dmodeling",
