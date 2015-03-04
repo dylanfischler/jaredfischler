@@ -11,12 +11,20 @@ module.exports = function(){
 	return [
 		//3D Modeling
 		{
+			title: "Low-Poly Landscape",
+			id: "Land-poly",
+			category: "3dmodeling",
+			desc: "Exploration of low-poly environments.",
+			mainType: "landscapeImage",
+			addImgs: ["LandPoly1", "LandPoly2", "LandPoly3"]
+		},	
+		{
 			title: "Low-Poly Room",
 			id: "Low-poly",
 			category: "3dmodeling",
 			desc: "A low-poly style model of my bedroom.",
 			mainType: "landscapeImage",
-			addImgs: ["Poly1", "Poly2", "Poly3"]
+			addImgs: ["Poly1", "Poly2", "Poly3", "Poly4"]
 		},
 		{
 			title: "Concept Designs for The Voyage",
@@ -51,6 +59,24 @@ module.exports = function(){
 			addImgs: ["ExperimentAlternative1", "ExperimentAlternative2", "ExperimentAlternative3", "ExperimentAlternative4"]
 		},
 		//Animation
+		{
+			title: "Minion Character",
+			id: "minion",
+			category: "animation",
+			desc: "Character concept design animated in motion capture.",
+			mainType: "htmlEmbed",
+			html: '<iframe width="1280" height="720" src="https://www.youtube.com/embed/Yxtz2bzQoyk?rel=0" frameborder="0" allowfullscreen></iframe>',
+			addImgs: ["Stick1", "Stick2", "Stick3"]
+		},	
+		{
+			title: "Flight",
+			id: "the_Flight",
+			category: "animation",
+			desc: "Fly through a low-poly land",
+			mainType: "htmlEmbed",
+			html: '<iframe width="1280" height="720" src="https://www.youtube.com/embed/cDz3PUuk4XA?rel=0" frameborder="0" allowfullscreen></iframe>',
+			addImgs: ["Flight1", "Flight2", "Flight3"]
+		},
 		{
 			title: "The Voyage | Ch.1: Voyage Begins",
 			id: "the_voyage_ch1_voyage_begins",
@@ -127,6 +153,14 @@ module.exports = function(){
 			html: '<iframe src="//player.vimeo.com/video/108298047?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="1280" height="720" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'
 		},
 		//Digital Art
+		{
+			title: "Picture Book Illustration",
+			id: "picture_book",
+			category: "digitalart",
+			desc: "Digital illustration made to fit a picture book style.",
+			mainType: "landscapeImage"
+			addImgs: ["digitalartalternative1", "digitalartalternative2"]
+		},
 		{
 			title: "Palace - Alternative Concept",
 			id: "palace_alternative_concept",
