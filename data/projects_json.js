@@ -158,7 +158,7 @@ module.exports = function(){
 			id: "picture_book",
 			category: "digitalart",
 			desc: "Digital illustration made to fit a picture book style.",
-			mainType: "landscapeImage"
+			mainType: "landscapeImage",
 			addImgs: ["digitalartalternative1", "digitalartalternative2"]
 		},
 		{
