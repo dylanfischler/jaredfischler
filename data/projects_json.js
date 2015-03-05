@@ -12,7 +12,7 @@ module.exports = function(){
 		//3D Modeling
 		{
 			title: "Low-Poly Landscape",
-			id: "Land-poly",
+			id: "Land-Poly",
 			category: "3dmodeling",
 			desc: "Exploration of low-poly environments.",
 			mainType: "landscapeImage",
@@ -159,7 +159,7 @@ module.exports = function(){
 			category: "digitalart",
 			desc: "Digital illustration made to fit a picture book style.",
 			mainType: "landscapeImage",
-			addImgs: ["digitalartalternative1", "digitalartalternative2"]
+			addImgs: ["picturebookalternative1", "picturebookalternative2"]
 		},
 		{
 			title: "Palace - Alternative Concept",
