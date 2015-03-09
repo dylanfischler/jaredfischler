@@ -74,7 +74,7 @@ module.exports = function(){
 			category: "animation",
 			desc: "Fly through a low-poly land",
 			mainType: "htmlEmbed",
-			html: '<iframe width="1280" height="720" src="https://www.youtube.com/embed/cDz3PUuk4XA?rel=0" frameborder="0" allowfullscreen></iframe>',
+			html: '<<iframe width="1280" height="720" src="https://www.youtube.com/embed/Qx3gySqZiIg?rel=0" frameborder="0" allowfullscreen></iframe>',
 			addImgs: ["Flight1", "Flight2", "Flight3"]
 		},
 		{
