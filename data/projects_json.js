@@ -65,7 +65,7 @@ module.exports = function(){
 			category: "animation",
 			desc: "Character concept design animated in motion capture.",
 			mainType: "htmlEmbed",
-			html: '<iframe width="1280" height="720" src="https://www.youtube.com/embed/Yxtz2bzQoyk?rel=0" frameborder="0" allowfullscreen></iframe>',
+			html: '<iframe width="1280" height="720" src="https://www.youtube.com/embed/okGm1_Qmmdk?rel=0" frameborder="0" allowfullscreen></iframe>',
 			addImgs: ["Stick1", "Stick2", "Stick3"]
 		},	
 		{
