@@ -8,19 +8,19 @@
 	</div>
 	<div class="mainContent">
 		<div class="landscapeImg htmlEmbed" ng-show="project.mainType == 'landscapeImage' || project.mainType == 'htmlEmbed'">
-			<img ng-show="project.mainType == 'landscapeImage'" ng-src="includes/project_images/{{project.id}}.jpg"/>
+			<a target="_new" ng-href="includes/project_images/{{project.id}}.jpg"><img ng-show="project.mainType == 'landscapeImage'" ng-src="includes/project_images/{{project.id}}.jpg"/></a>
 			
 			<div class="vim_wrap" ng-show="project.mainType == 'htmlEmbed'">
 				<div class="theEmbed" ng-bind-html="project.html"></div>
 			</div>
 		</div>
 		<div class="portraitImg" ng-show="project.mainType == 'portraitImage'">
-			<img ng-src="includes/project_images/{{project.id}}.jpg"/>
+			<a target="_new" ng-href="includes/project_images/{{project.id}}.jpg"><img ng-src="includes/project_images/{{project.id}}.jpg"/></a>
 		</div>
 
 		<!-- additional images -->
 		<div class="landscapeImg additional" ng-repeat="image in project.addImgs">
-			<img ng-src="includes/project_images/{{image}}.jpg"/>
+			<a target="_new" ng-href="includes/project_images/{{image}}.jpg"><img ng-src="includes/project_images/{{image}}.jpg"/></a>
 		</div>
 
 		<!-- additional html embeds -->
