@@ -60,7 +60,14 @@ module.exports = function() {
 
 	// route configuration
 
-	app.listen(PORT, IP);
+	if(process.env.NODE_ENV == 'development'){
+		app.listen(3000);
+	}
+	if(process.env.NODE_ENV == 'production'){
+		app.listen(PORT, IP);
+	}
+
+	// app.listen(PORT, IP);
 	// app.listen(3000);
 
 	return app;
