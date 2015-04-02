@@ -17,7 +17,7 @@ module.exports = function(){
 			desc: "Exploration of low-poly environments.",
 			mainType: "landscapeImage",
 			addImgs: ["LandPoly1", "LandPoly2", "LandPoly3"]
-		],
+		},
 		{
 			title: "Low-Poly Landscape II",
 			id: "Land-PolyII",
