@@ -24,7 +24,7 @@ module.exports = function(){
 			category: "3dmodeling",
 			desc: "Exploration of low-poly environments.",
 			mainType: "landscapeImage",
-			addImgs: ["LandPolyII.1", "LandPolyII.2"]
+			addImgs: ["LandPolyII1", "LandPolyII2"]
 		},	
 		{
 			title: "Low-Poly Room",
