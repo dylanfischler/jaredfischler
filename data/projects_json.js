@@ -19,6 +19,14 @@ module.exports = function(){
 			addImgs: ["WB1", "WB2", "WB3"]
 		},
 		{
+			title: "Vintage Bike",
+			id: "vintagebike",
+			category: "3dmodeling",
+			desc: "Work in progress render of a Vintage Bike. Modeled, textured, and rendered in Cinema4d.",
+			mainType: "landscapeImage",
+			addImgs: ["VB1"]
+		},
+		{
 			title: "Break Room",
 			id: "breakroom",
 			category: "3dmodeling",
