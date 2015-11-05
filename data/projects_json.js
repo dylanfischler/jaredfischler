@@ -62,6 +62,7 @@ module.exports = function(){
 			title: "Concept Designs for The Voyage",
 			id: "concept_design_for_the_voyage",
 			category: "3dmodeling",
+			
 			desc: "In preparation for a new chapter of The Voyage, I have started to conceptualize what creatures may populate the environments and what those environments may look like.",
 			mainType: "landscapeImage",
 			addImgs: ["ConceptAlternative1", "ConceptAlternative2", "ConceptAlternative3", "ConceptAlternative4", "ConceptAlternative5"]
