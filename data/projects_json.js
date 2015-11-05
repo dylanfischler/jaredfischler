@@ -11,6 +11,14 @@ module.exports = function(){
 	return [
 		//3D Modeling
 		{
+			title: "Work Bench",
+			id: "WorkBench",
+			category: "3dmodeling",
+			desc: "A work bench procedurally textured and rendered in Cinema4d. All models were provided except for the brick wall which I modeled and textured in Cinema4d.",
+			mainType: "landscapeImage",
+			addImgs: ["WB1", "WB2", "WB3"]
+		},
+		{
 			title: "Break Room",
 			id: "breakroom",
 			category: "3dmodeling",
