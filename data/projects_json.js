@@ -14,9 +14,9 @@ module.exports = function(){
 			title: "Break Room",
 			id: "breakroom",
 			category: "3dmodeling",
-			desc: "An Office Break Room created in Cinema4d. Responsible for Lighting, Rendering, and Modeling all but the couch model and the coffeemaker model.",
+			desc: "An Office Break Room created in Cinema4d. Responsible for Lighting, Rendering, and Modeling all but the couch model, the coffeemaker model, and the snack machine.",
 			mainType: "landscapeImage",
-			addImgs: ["BR1", "BR2", "BR3", "BR4"]
+			addImgs: ["BR1", "BR2", "BR3", "BR4", "BR5"]
 		},
 		{
 			title: "Low-Poly Room",
