@@ -11,12 +11,20 @@ module.exports = function(){
 	return [
 		//3D Modeling
 		{
-			title: "Low-Poly Landscape",
-			id: "Land-Poly",
+			title: "Break Room",
+			id: "breakroom",
 			category: "3dmodeling",
-			desc: "Exploration of low-poly environments.",
+			desc: "An Office Break Room created in Cinema4d. Responsible for Lighting, Rendering, and Modeling all but the couch model and the coffeemaker model.",
 			mainType: "landscapeImage",
-			addImgs: ["LandPoly1", "LandPoly2", "LandPoly3"]
+			addImgs: ["BR1", "BR2", "BR3", "BR4"]
+		},
+		{
+			title: "Low-Poly Room",
+			id: "Low-poly",
+			category: "3dmodeling",
+			desc: "A low-poly style model of my bedroom.",
+			mainType: "landscapeImage",
+			addImgs: ["Poly1", "Poly2", "Poly3", "Poly4"]
 		},
 		{
 			title: "Low-Poly Landscape II",
@@ -27,12 +35,12 @@ module.exports = function(){
 			addImgs: ["Land-PolyII1", "Land-PolyII2"]
 		},	
 		{
-			title: "Low-Poly Room",
-			id: "Low-poly",
+			title: "Low-Poly Landscape",
+			id: "Land-Poly",
 			category: "3dmodeling",
-			desc: "A low-poly style model of my bedroom.",
+			desc: "Exploration of low-poly environments.",
 			mainType: "landscapeImage",
-			addImgs: ["Poly1", "Poly2", "Poly3", "Poly4"]
+			addImgs: ["LandPoly1", "LandPoly2", "LandPoly3"]
 		},
 		{
 			title: "Concept Designs for The Voyage",
