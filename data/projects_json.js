@@ -187,6 +187,14 @@ module.exports = function(){
 		},
 		//Digital Art
 		{
+			title: "City Scene",
+			id: "city_scene",
+			category: "digitalart",
+			desc: "A city scene composited and painted using Adobe Photoshop. Pictures used are not owned by me.",
+			mainType: "landscapeImage",
+			addImgs: ["cityscene1"]
+		},
+		{
 			title: "Picture Book Illustration",
 			id: "picture_book",
 			category: "digitalart",
