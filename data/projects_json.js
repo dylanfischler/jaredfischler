@@ -24,7 +24,7 @@ module.exports = function(){
 			category: "3dmodeling",
 			desc: "Work in progress render of a Vintage Bike. Modeled, textured, and rendered in Cinema4d.",
 			mainType: "landscapeImage",
-			addImgs: ["VB1"]
+			addImgs: ["VB1, VB2, VB3, VB4"]
 		},
 		{
 			title: "Break Room",
