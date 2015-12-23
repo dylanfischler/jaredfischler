@@ -24,7 +24,7 @@ module.exports = function(){
 			category: "3dmodeling",
 			desc: "Work in progress render of a Vintage Bike. Modeled, textured, and rendered in Cinema4d.",
 			mainType: "landscapeImage",
-			addImgs: ["VB1", "VB2", "VB3", "VB4"]
+			addImgs: ["VB2", "VB3", "VB4"]
 		},
 		{
 			title: "Break Room",
@@ -92,6 +92,15 @@ module.exports = function(){
 			addImgs: ["ExperimentAlternative1", "ExperimentAlternative2", "ExperimentAlternative3", "ExperimentAlternative4"]
 		},
 		//Animation
+		{
+			title: "Opthalma",
+			id: "OP",
+			category: "animation",
+			desc: "A video game trailer",
+			mainType: "htmlEmbed",
+			html: '<iframe src="https://player.vimeo.com/video/149871907" width="1280" height="720" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/149871907">Ophthalma - A Trailer</a> from <a href="https://vimeo.com/jaredfischler">Jared Fischler</a> on <a href="https://vimeo.com">Vimeo</a>.</p>',
+			addImgs: ["OP1", "OP2", "OP3"]
+		},
 		{
 			title: "Minion Character",
 			id: "minion",
