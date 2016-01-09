@@ -11,6 +11,14 @@ module.exports = function(){
 	return [
 		//3D Modeling
 		{
+			title: "Living Room",
+			id: "LivingRoom",
+			category: "3dmodeling",
+			desc: "A Final Project for my Lighting/Rendering class. The first untextured model was provided by my professor.All lighting and texturing as well as the additional modeled assets were created in Cinema4d.",
+			mainType: "landscapeImage",
+			addImgs: ["LR1", "LR2", "LR3", "LR4", "LR5"]
+		},
+		{
 			title: "Work Bench",
 			id: "WorkBench",
 			category: "3dmodeling",
