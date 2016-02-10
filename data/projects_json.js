@@ -11,6 +11,13 @@ module.exports = function(){
 	return [
 		//3D Modeling
 		{
+			title: "Remì the Raptor",
+			id: "Raptor",
+			category: "3dmodeling",
+			desc: "A velociraptor sculpted in Zbrush and painted in 3dCoat",
+			mainType: "landscapeImage",
+			addImgs: ["Raptor1", "Raptor2", "Raptor3"]
+		},		{
 			title: "Living Room",
 			id: "LivingRoom",
 			category: "3dmodeling",
