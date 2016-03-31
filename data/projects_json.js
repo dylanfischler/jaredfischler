@@ -11,13 +11,38 @@ module.exports = function(){
 	return [
 		//3D Modeling
 		{
+			title: "Pirate Assets",
+			id: "Pirate",
+			category: "3dmodeling",
+			desc: "Assets created in Zbrush and 3dCoat for a future character model",
+			mainType: "landscapeImage",
+			addImgs: ["Pirate1", "Pirate2"]
+		},
+		{
+			title: "Child's Room",
+			id: "Child",
+			category: "3dmodeling",
+			desc: "A child's room made in Zbrush, 3dCoat, and Cinema4d",
+			mainType: "landscapeImage",
+			addImgs: ["Child1", "Child2"]
+		},
+		{
+			title: "Boston Children's Hospital Projects",
+			id: "BCH",
+			category: "3dmodeling",
+			desc: "Various projects created for Boston Children's Hospital's Interactive Media Wall",
+			mainType: "landscapeImage",
+			addImgs: ["BCH1", "BCH2"]
+		},
+		{
 			title: "Remì the Raptor",
 			id: "Raptor",
 			category: "3dmodeling",
 			desc: "A velociraptor sculpted in Zbrush and painted in 3dCoat",
 			mainType: "landscapeImage",
 			addImgs: ["Raptor1", "Raptor2", "Raptor3"]
-		},		{
+		},
+		{
 			title: "Living Room",
 			id: "LivingRoom",
 			category: "3dmodeling",
