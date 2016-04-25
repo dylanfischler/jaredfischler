@@ -11,6 +11,22 @@ module.exports = function(){
 	return [
 		//3D Modeling
 		{
+			title: "Floating Islands,
+			id: "Island",
+			category: "3dmodeling",
+			desc: "Work in progress models created for a personal project. Sculpted in Zbrush. Rendered in Cinema4d",
+			mainType: "landscapeImage",
+			addImgs: ["Island1", "Island2"]
+		},
+		{
+			title: "Boston Children's Hospital: Unity Optimized Game Assets",
+			id: "Assets",
+			category: "3dmodeling",
+			desc: "Assets created in Zbrush and Cinema4d for Boston Children's Hospital's Unity-based Interactive Media Wall",
+			mainType: "landscapeImage",
+			addImgs: ["Assets1", "Assets2"]
+		},
+		{
 			title: "Pirate Assets",
 			id: "Pirate",
 			category: "3dmodeling",
@@ -27,10 +43,10 @@ module.exports = function(){
 			addImgs: ["Child1", "Child2"]
 		},
 		{
-			title: "Boston Children's Hospital Projects",
+			title: "Boston Children's Hospital: Character Models",
 			id: "BCH",
 			category: "3dmodeling",
-			desc: "Various projects created for Boston Children's Hospital's Interactive Media Wall",
+			desc: "Character models created for Boston Children's Hospital's Interactive Media Wall",
 			mainType: "landscapeImage",
 			addImgs: ["BCH1", "BCH2"]
 		},
