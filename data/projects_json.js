@@ -11,7 +11,7 @@ module.exports = function(){
 	return [
 		//3D Modeling
 		{
-			title: "Floating Islands,
+			title: "Floating Islands",
 			id: "Island",
 			category: "3dmodeling",
 			desc: "Work in progress models created for a personal project. Sculpted in Zbrush. Rendered in Cinema4d",
@@ -32,7 +32,7 @@ module.exports = function(){
 			category: "3dmodeling",
 			desc: "Assets created in Zbrush and 3dCoat for a future character model",
 			mainType: "landscapeImage",
-			addImgs: ["Pirate1", "Pirate2"]
+			addImgs: ["Pirate1"]
 		},
 		{
 			title: "Child's Room",
@@ -48,7 +48,7 @@ module.exports = function(){
 			category: "3dmodeling",
 			desc: "Character models created for Boston Children's Hospital's Interactive Media Wall",
 			mainType: "landscapeImage",
-			addImgs: ["BCH1", "BCH2"]
+			addImgs: ["BCH1"]
 		},
 		{
 			title: "Remì the Raptor",
@@ -56,7 +56,7 @@ module.exports = function(){
 			category: "3dmodeling",
 			desc: "A velociraptor sculpted in Zbrush and painted in 3dCoat",
 			mainType: "landscapeImage",
-			addImgs: ["Raptor1", "Raptor2", "Raptor3"]
+			addImgs: ["Raptor1", "Raptor2"]
 		},
 		{
 			title: "Living Room",
