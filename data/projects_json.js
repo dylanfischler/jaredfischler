@@ -11,7 +11,7 @@ module.exports = function(){
 	return [
 		//3D Modeling
 		{
-			title: "Floating Islands,
+			title: "Floating Islands",
 			id: "Island",
 			category: "3dmodeling",
 			desc: "Work in progress models created for a personal project. Sculpted in Zbrush. Rendered in Cinema4d",
