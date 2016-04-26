@@ -24,7 +24,7 @@ module.exports = function(){
 			category: "3dmodeling",
 			desc: "Assets created in Zbrush and Cinema4d for Boston Children's Hospital's Unity-based Interactive Media Wall",
 			mainType: "landscapeImage",
-			addImgs: ["Assets1", "Assets2"]
+			addImgs: ["Assets2", "Assets3"]
 		},
 		{
 			title: "Pirate Assets",
@@ -51,7 +51,7 @@ module.exports = function(){
 			addImgs: ["BCH1"]
 		},
 		{
-			title: "Remì the Raptor",
+			title: "Remi the Raptor",
 			id: "Raptor",
 			category: "3dmodeling",
 			desc: "A velociraptor sculpted in Zbrush and painted in 3dCoat",
@@ -64,7 +64,7 @@ module.exports = function(){
 			category: "3dmodeling",
 			desc: "A Final Project for my Lighting/Rendering class. The first untextured model was provided by my professor.All lighting and texturing as well as the additional modeled assets were created in Cinema4d.",
 			mainType: "landscapeImage",
-			addImgs: ["LR1", "LR2", "LR3", "LR4", "LR5"]
+			addImgs: ["LR1", "LR2", "LR3", "LR4"]
 		},
 		{
 			title: "Work Bench",
