@@ -1,0 +1,38 @@
+[
+	{
+		"title": "3D Modeling",
+		"imgPath": "includes/categories/3DModel.JPG",
+		"route": "3dmodeling",
+		"controller": "CategoryController"
+	},
+	{
+		"title": "Animation",
+		"imgPath": "includes/categories/Animation.JPG",
+		"route": "animation",
+		"controller": "CategoryController"
+	},
+	{
+		"title": "Cinematography",
+		"imgPath": "includes/categories/Cinematography.JPG",
+		"route": "cinematography",
+		"controller": "CategoryController"
+	},
+	{
+		"title": "Digital Art",
+		"imgPath": "includes/categories/Digital_Art.JPG",
+		"route": "digitalart",
+		"controller": "CategoryController"
+	},
+	{
+		"title": "Graphic Design",
+		"imgPath": "includes/categories/Graphic_Design.png",
+		"route": "graphicdesign",
+		"controller": "CategoryController"
+	},
+	{
+		"title": "Sketches",
+		"imgPath": "includes/categories/Sketches.jpg",
+		"route": "sketches",
+		"controller": "CategoryController"
+	}
+]
