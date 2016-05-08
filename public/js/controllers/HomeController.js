@@ -1,6 +1,13 @@
-app.controller("HomeController", function($scope, $routeParams, $location, anchorSmoothScroll){
+app.controller("HomeController", function($scope, $routeParams, $location, $http, anchorSmoothScroll, $sce){
 	$scope.categories = categories;
 	$scope.nav = false;
+
+    $http.get("/personal_details").then(function(res){
+        $scope.userData = res.data;
+        $scope.video_embed = $sce.trustAsHtml(res.data.video_reel);
+    }, function(err){
+        console.error(err);
+    });
 
 	$scope.mobileNav = function(id){
     	$location.hash('bottom');

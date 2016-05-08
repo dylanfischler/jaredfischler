@@ -55,8 +55,8 @@
         <div class="me_img"></div>
     </div>
     <div class="bio_content">
-        <h1>I am an artist training in the fields of motion graphics and 3D visualization.</h1>
-        <h2>Here is my work.</h2>
+        <h1>{{userData.bio.intro}}</h1>
+        <h2>{{userData.bio.sub_intro}}</h2>
     </div>
 </section>
 
@@ -66,9 +66,7 @@
 <section id="reel">
     <div class="title">Video Reel</div>
     <div class="reel_container">
-        <div class="vim_wrap">
-           <iframe src="https://player.vimeo.com/video/149337788" width="1280" height="719" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/149337788">Demo Reel Year of 2015</a> from <a href="https://vimeo.com/jaredfischler">Jared Fischler</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-        </div>
+        <div class="vim_wrap" ng-bind-html="video_embed"></div>
     </div>
 </section>
 
@@ -91,25 +89,12 @@
 <section id="education">
     <div class="title">Education</div>
     <div class="content">
-        <h3>University of Connecticut</h3>
+        <h3>{{userData.education.school}}</h3>
         <br />
-        <h3>Bachelor of Arts</h3>
-        <h4>Digital Media &amp; Design</h4>
-
-        <h3>Concentration 1</h3>
-        <h4>2D Animation &amp; Motion Graphics</h4>
-
-        <h3>Concentration 2</h3>
-        <h4>3D Animation &amp; Visualization</h4>
-
-        <h3>Cumulative GPA</h3>
-        <h4>3.553</h4>
-
-        <h3>Awards</h3>
-        <h4>Deans List(Fall 2013,2014), Fine Arts Talent Scholarship</h4>
-
-        <h3>Relevant Courses</h3>
-        <h4>Animation Lab, Design Process, Motion Graphics I, 3D Animation I, Moving Image &amp; Sequence, 3D Modeling I, 3D Animation II, Lighting &amp; Rendering I, Introduction to Game Scripting</h4>
+        <span ng-repeat="ed_item in userData.education.items">
+            <h3>{{ed_item.title}}</h3>
+            <h4>{{ed_item.content}}</h4>
+        </span>
     </div>
     
 </section>
@@ -119,21 +104,11 @@
 <section id="skills">
     <div class="title">skills</div>
     <div class="content">
-        
-        <h3>Adobe</h3>
-        <h4>Photoshop, Premiere, Illustrator, InDesign, After Effects</h4>
-        
-        <h3>AutoDesk</h3>
-        <h4>Softimage</h4>
-        
-        <h3>Maxon</h3>
-        <h4>Cinema 4D</h4>
-        
-        <h3>Pilgway Studio</h3>
-        <h4>3D Coat</h4>
-
+        <span ng-repeat="skill_item in userData.skills.items">
+            <h3>{{skill_item.title}}</h3>
+            <h4>{{skill_item.content}}</h4>
+        </span>
     </div>
-    
 </section>
 
 <!-- Seventh Section :: Contact -->
@@ -141,13 +116,9 @@
 <section id="contact">
     <div class="title">Contact</div>
     <div class="row">
-        <h2>Email me:</h2>
-        <a href="mailto:jared.fischler@uconn.edu" target="_new">jared.fischler@uconn.edu</a>
-
-        <h2>Connect with me:</h2>
-        <a href="http://www.linkedin.com/in/jaredfischler" target="_new">linkedin.com/in/jaredfischler</a>
-
-        <h2>Follow me:</h2>
-        <a href="http://www.instagram.com/jared_fischler" target="_new">instagram.com/jared_fischler</a>
+        <span ng-repeat="cont_item in userData.contact.items">
+            <h2>{{cont_item.title}}:</h2>
+            <a ng-href="{{cont_item.link}}" target="_new">{{cont_item.link_title}}</a>
+        </span>
     </div>
 </section> 

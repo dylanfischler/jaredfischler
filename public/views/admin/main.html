@@ -1,0 +1,102 @@
+<hr />
+
+<form>
+	<!-- Bio Panel -->
+	<div class="panel panel-default">
+	  <div class="panel-heading">Bio</div>
+	  <div class="panel-body">
+	    <div class="form-group">
+		    <label>Intro</label>
+		    <input type="text" class="form-control" placeholder="this is my introduction" ng-model="userData.bio.intro">
+	    </div>
+	    <div class="form-group">
+		    <label>Sub-Intro</label>
+		    <input type="text" class="form-control" placeholder="this is my sub-introduction" ng-model="userData.bio.sub_intro">
+	    </div>
+	    <button type="button" class="btn btn-primary" ng-click="update()">Save</button>
+	  </div>
+	</div>
+
+	<!-- Video Reel Panel -->
+	<div class="panel panel-default">
+	  <div class="panel-heading">Video Reel</div>
+	  <div class="panel-body">
+	    <div class="form-group">
+		    <label>Video Reel</label>
+		    <input type="html" class="form-control" placeholder="my HTML Embed" ng-model="userData.video_reel">
+	    </div>
+	    <button type="button" class="btn btn-primary" ng-click="update()">Save</button>
+	  </div>
+	</div>
+
+	<!-- Education Panel -->
+	<div class="panel panel-default">
+	  <div class="panel-heading">Education</div>
+	  <div class="panel-body">
+  	    <div class="form-group">
+  		    <label>School</label>
+  		    <input type="text" class="form-control" placeholder="school" ng-model="userData.education.school">
+  	    </div>
+	    <div class="form-group">
+		    <div class="row" ng-repeat="ed_item in userData.education.items track by $index">
+		    	<div class="col-xs-6 form-group">
+		    		<label>Title</label>
+		    		<input type="text" class="form-control" placeholder="title" ng-model="userData.education.items[$index].title">
+		    	</div>
+		    	<div class="col-xs-6 form-group">
+		    		<label>Content</label>
+		    		<input type="text" class="form-control" placeholder="content" ng-model="userData.education.items[$index].content">
+		    	</div>
+		    </div>
+	    </div>
+	    <button type="button" class="btn btn-primary" ng-click="update()">Save</button>
+	    <button type="button" class="btn btn-success">Add Item</button>
+	  </div>
+	</div>
+
+	<!-- Skills Panel -->
+	<div class="panel panel-default">
+	  <div class="panel-heading">Skills</div>
+	  <div class="panel-body">
+	        <div class="form-group">
+	    	    <div class="row" ng-repeat="ed_item in userData.skills.items track by $index">
+	    	    	<div class="col-xs-6 form-group">
+	    	    		<label>Title</label>
+	    	    		<input type="text" class="form-control" placeholder="title" ng-model="userData.skills.items[$index].title">
+	    	    	</div>
+	    	    	<div class="col-xs-6 form-group">
+	    	    		<label>Content</label>
+	    	    		<input type="text" class="form-control" placeholder="content" ng-model="userData.skills.items[$index].content">
+	    	    	</div>
+	    	    </div>
+	        </div>
+	    <button type="button" class="btn btn-primary" ng-click="update()">Save</button>
+	    <button type="button" class="btn btn-success">Add Item</button>
+	  </div>
+	</div>
+
+	<!-- Contact Panel -->
+	<div class="panel panel-default">
+	  <div class="panel-heading">Contact</div>
+	  <div class="panel-body">
+	        <div class="form-group">
+	    	    <div class="row" ng-repeat="ed_item in userData.contact.items track by $index">
+	    	    	<div class="col-sm-4 col-xs-12 form-group">
+	    	    		<label>Title</label>
+	    	    		<input type="text" class="form-control" placeholder="title" ng-model="userData.contact.items[$index].title">
+	    	    	</div>
+	    	    	<div class="col-sm-4 col-xs-12 form-group">
+	    	    		<label>Link</label>
+	    	    		<input type="text" class="form-control" placeholder="content" ng-model="userData.contact.items[$index].link">
+	    	    	</div>
+	    	    	<div class="col-sm-4 col-xs-12 form-group">
+	    	    		<label>Link Title</label>
+	    	    		<input type="text" class="form-control" placeholder="content" ng-model="userData.contact.items[$index].link_title">
+	    	    	</div>
+	    	    </div>
+	        </div>
+	    <button type="button" class="btn btn-primary" ng-click="update()">Save</button>
+	    <button type="button" class="btn btn-success">Add Item</button>
+	  </div>
+	</div>
+</form>

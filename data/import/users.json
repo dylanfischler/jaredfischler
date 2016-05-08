@@ -1,0 +1,77 @@
+{
+	"username": "jaredfischler", 
+	"password": "",
+	"bio": {
+		"intro": "I am an artist training in the fields of motion graphics and 3D visualization.",
+		"sub_intro": "Here is my work."
+	},
+	"video_reel": "<iframe src='https://player.vimeo.com/video/149337788' width='1280' height='719' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href='https://vimeo.com/149337788'>Demo Reel Year of 2015</a> from <a href='https://vimeo.com/jaredfischler'>Jared Fischler</a> on <a href='https://vimeo.com'>Vimeo</a>.</p>",
+	"education": {
+		"school": "University of Connecticut",
+		"items": [
+			{
+				"title": "Bachelor of Arts",
+				"content": "Digital Media &amp; Design"
+			},
+			{ 
+				"title": "Concentration 1",
+				"content": "2D Animation &amp; Motion Graphics"
+			},
+			{
+				"title": "Concentration 2",
+				"content": "3D Animation &amp; Visualization"
+			},
+			{
+				"title": "Cumulative GPA",
+				"content": "3.553"
+			},
+			{
+				"title": "Awards",
+				"content": "Deans List(Fall 2013,2014), Fine Arts Talent Scholarship"
+			},
+			{
+				"title": "Relevant Courses",
+				"content": "Animation Lab, Design Process, Motion Graphics I, 3D Animation I, Moving Image &amp; Sequence, 3D Modeling I, 3D Animation II, Lighting &amp; Rendering I, Introduction to Game Scripting"
+			}
+		]
+	},
+	"skills": {
+		"items": [
+			{
+				"title": "Adobe",
+				"content": "Photoshop, Premiere, Illustrator, InDesign, After Effects"
+			},
+			{
+				"title": "AutoDesk",
+				"content": "Softimage"
+			},
+			{
+				"title": "Maxon",
+				"content": "Cinema 4D"
+			},
+			{
+				"title": "Pilgway Studio",
+				"content": "3D Coat"
+			}
+		]
+	},
+	"contact": {
+		"items": [
+			{
+				"title": "Email me",
+				"link": "mailto:jared.fischler@uconn.edu",
+				"link_title": "jared.fischler@uconn.edu"
+			},
+			{
+				"title": "Connect with me",
+				"link": "http://www.linkedin.com/in/jaredfischler",
+				"link_title": "linkedin.com/in/jaredfischler"
+			},
+			{
+				"title": "Follow me",
+				"link": "http://www.instagram.com/jared_fischler",
+				"link_title": "instagram.com/jared_fischler"
+			}
+		]
+	}
+}

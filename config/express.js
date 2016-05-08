@@ -89,6 +89,30 @@ const configure = (app, db) => {
 		}
 	});
 
+	app.get("/personal_details", (req,res) => {
+		db.collection("users").findOne({}, (err, user) => {
+			if(err) return res.send(err);
+			else {
+				delete user.password; delete user._id;
+				return res.send(user);
+			}
+		})
+	});
+
+	app.post("/personal_details", ensureAuthenticated, (req,res) => {
+		if(!req.body.user) res.send("No user object provided");
+		else {
+			db.collection("users").findOneAndUpdate({ _id: new ObjectID(req.user._id)}, { $set: req.body.user }, { 'returnOriginal': false }, (err, result) => {
+				if(err) return res.send(err);
+				else {
+					delete result.value.password;
+					delete result.value._id;
+					return res.send(result);
+				}
+			})
+		}
+	});
+
 	app.get('/login', (req,res) => res.render('login'));
 
 	app.post('/login', passport.authenticate('local', 
@@ -98,9 +122,13 @@ const configure = (app, db) => {
 		}
 	));
 
+
 	app.get('/admin', ensureAuthenticated, (req,res) => res.render('admin'));
 
-	var IP = process.env.JARED_IP;
+
+
+
+
     var PORT = process.env.JARED_PORT || 8080;
 
 	// route configuration
@@ -109,9 +137,10 @@ const configure = (app, db) => {
 		app.listen(3000);
 		console.log('app listening on port 3000');
 	}
-	if(process.env.NODE_ENV === 'production'){
-		app.listen(PORT, IP);
+	else if(process.env.NODE_ENV === 'production'){
+		app.listen(PORT);
 	}
+	else console.error("NODE_ENV not set, http process not started.");
 
 	// app.listen(PORT, IP);
 	// app.listen(3000);
@@ -163,10 +192,11 @@ module.exports = function() {
     if(process.env.NODE_ENV == 'development'){
     	DB_URL = 'mongodb://localhost:27017/jaredfischler';
     }
-    if(process.env.NODE_ENV == 'production'){
+    else if(process.env.NODE_ENV == 'production'){
     	// DB_URL = `mongodb://${process.env.OPENSHIFT_MONGODB_DB_HOST}:${process.env.OPENSHIFT_MONGODB_DB_PORT}/`;
     	DB_URL = 'mongodb://localhost:27017/jaredfischler';
     }
+    else return console.error("NODE_ENV not set, http process not started.");
 
     mongoClient.connect(DB_URL, (err, db) => {
     	if (err) {
