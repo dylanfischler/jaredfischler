@@ -100,8 +100,8 @@ const configure = (app, db) => {
 
 	app.get('/admin', ensureAuthenticated, (req,res) => res.render('admin'));
 
-	var IP = process.env.OPENSHIFT_NODEJS_IP;
-    var PORT = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+	var IP = process.env.JARED_IP;
+    var PORT = process.env.JARED_PORT || 8080;
 
 	// route configuration
 
@@ -164,7 +164,8 @@ module.exports = function() {
     	DB_URL = 'mongodb://localhost:27017/jaredfischler';
     }
     if(process.env.NODE_ENV == 'production'){
-    	DB_URL = `mongodb://${process.env.OPENSHIFT_MONGODB_DB_HOST}:${process.env.OPENSHIFT_MONGODB_DB_PORT}/`;
+    	// DB_URL = `mongodb://${process.env.OPENSHIFT_MONGODB_DB_HOST}:${process.env.OPENSHIFT_MONGODB_DB_PORT}/`;
+    	DB_URL = 'mongodb://localhost:27017/jaredfischler';
     }
 
     mongoClient.connect(DB_URL, (err, db) => {
