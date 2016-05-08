@@ -39,7 +39,7 @@
     "swig": "~1.4.1"
   },
   "scripts": {
-    "start": "forever start app.js"
+    "start": "node app.js"
   },
   "private": true,
   "main": "app.js"

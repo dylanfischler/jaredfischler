@@ -100,15 +100,16 @@ const configure = (app, db) => {
 
 	app.get('/admin', ensureAuthenticated, (req,res) => res.render('admin'));
 
+	var IP = process.env.OPENSHIFT_NODEJS_IP;
+    var PORT = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+
 	// route configuration
 
-	if(process.env.NODE_ENV == 'development'){
+	if(process.env.NODE_ENV === 'development'){
 		app.listen(3000);
 		console.log('app listening on port 3000');
 	}
-	if(process.env.NODE_ENV == 'production'){
-		let IP = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
-		let PORT = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+	if(process.env.NODE_ENV === 'production'){
 		app.listen(PORT, IP);
 	}
 
@@ -157,8 +158,6 @@ module.exports = function() {
 	var app = express();
 
 	//define some env variables
-	var IP = process.env.OPENSHIFT_NODEJS_IP;
-    var PORT = process.env.OPENSHIFT_NODEJS_PORT || 8080;
     var DB_URL;
 
     if(process.env.NODE_ENV == 'development'){
