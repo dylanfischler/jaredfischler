@@ -1,23 +1,31 @@
-var projects = require('../data/projects_json')();
+module.exports = function(db){
+	return {
+		projectsByCategory: function(reqCat){
+			return new Promise((resolve, reject) => {
+				db.collection('projects').find({category: reqCat}).toArray((err, projects) => {
+					if(err) reject(err);
+					else resolve(projects);
+				});
+			});
+		},
 
-module.exports = {
-	projectsByCategory: function(reqCat){
-		return projects.filter(function(el){
-			return (el.category === reqCat);
-		});
-	},
+		getProject: function(id){
+			return new Promise((resolve, reject) => {
+				db.collection('projects').findOne({id}, (err, project) => {
+					if(err) reject(err);
+					else resolve(project);
+				});
+			});
+		},
 
-	getProject: function(id){
-		var filtered = projects.filter(function(el){
-			return (el.id == id);
-		});
-
-		return filtered[0];
-	},
-
-	allProjects: function(){
-		return projects;
+		allProjects: function(){
+			return new Promise((resolve, reject) => {
+				db.collection('projects').find({}).toArray((err, projects) => {
+					if(err) reject(err);
+					else resolve(projects);
+				});
+			});
+		}
 	}
-
-}
+};
 

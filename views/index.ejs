@@ -36,13 +36,8 @@
     <!-- Controllers -->
     <script src="js/controllers/mainController.js"></script>
     <script src="js/controllers/HomeController.js"></script>
-    <!-- <script src="js/controllers/ProjectCategoriesController.js"></script> -->
-    <script src="js/controllers/CategoryControllers/3dmodelingController.js"></script>
-    <script src="js/controllers/CategoryControllers/AnimationController.js"></script>
-    <script src="js/controllers/CategoryControllers/CinematographyController.js"></script>
-    <script src="js/controllers/CategoryControllers/DigitalartController.js"></script>
-    <script src="js/controllers/CategoryControllers/GraphicdesignController.js"></script>
-    <script src="js/controllers/CategoryControllers/SketchesController.js"></script>
+    <script src="js/controllers/CategoryController.js"></script>
+
     <script src="js/controllers/ProjectController.js"></script>
 
     <!-- Directives -->
@@ -60,20 +55,14 @@
 
       ga('create', 'UA-58500204-1', 'auto');
       ga('send', 'pageview');
-
     </script>
-
+    <script>window.categories = JSON.parse(<%- JSON.stringify(categories) %>)</script>
 </head>
 
 <body ng-controller="mainController">
-    <!-- <div id="loading" ngclass="{loading: viewLoading}">
-        <div class="content pulsating"><h1>loading...</h1></div>
-    </div> -->
-
     <!-- Angular Injected Views -->
     <div id="main">
         <div ng-view autoscroll="true"></div>
     </div>
-
 </body>
 </html>

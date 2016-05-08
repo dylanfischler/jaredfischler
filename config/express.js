@@ -25,9 +25,6 @@ var fs = require('fs'),
 	passport = require('passport'),
 	path = require('path');
 
-/* Data Dependencies */
-var categories = require('../data/categories')();
-var projects = require('../data/projects');
 
 let LocalStrategy = require('passport-local').Strategy;
 
@@ -40,6 +37,10 @@ const ensureAuthenticated = (req,res,next) => {
 const configure = (app, db) => {
 	configurePassport(db);
 
+	/* Data Dependencies */
+	let categories = require('../data/categories')(db);
+	let projects = require('../data/projects')(db);
+
 	// configure the application
 	app.use(bodyParser.urlencoded({extended: true}));
 	app.use(bodyParser.json());
@@ -49,22 +50,46 @@ const configure = (app, db) => {
 	app.use(session({ secret: 'some secretive thing about secrets' }));
 	app.use(passport.initialize());
 	app.use(passport.session());
+	app.set('view engine', 'ejs');
 
-	app.get("/", (req,res) => res.sendFile(path.join(`${__dirname}/../views/index.html`)));
+	// app.get("/", (req,res) => res.sendFile(path.join(`${__dirname}/../views/index.html`)));
+	app.get("/", (req,res) => {
+		categories.all().then(
+			(categories) => res.render('index', {categories: JSON.stringify(categories)}),
+			(err) => res.send(err)
+		);
+	});
 
 	//routing 
-	app.get("/categories", (req,res) => res.send(categories));
+	app.get("/categories", (req,res) => {
+		categories.all().then(
+			(categories) => res.send(categories),
+			(err) => res.send(err)
+		);
+	});
 
 	app.get("/projects", (req,res) => {
 		//specific project requested
-		if(req.query.id) res.send(projects.getProject(req.query.id));
+		if(req.query.id){
+			projects.getProject(req.query.id).then(
+				(project) => res.send(project),
+				(err) => res.send(err)
+			);
+		}
 		//category requested
-		else if(req.query.category) res.send(projects.projectsByCategory(req.query.category));
+		else if(req.query.category){
+			projects.projectsByCategory(req.query.category).then(
+				(projects) => res.send(projects),
+				(err) => res.send(err)
+			);
+		} 
 		//no parameters
-		else res.send(projects.allProjects());
+		else {
+			res.send(projects.allProjects());	
+		}
 	});
 
-	app.get('/login', (req,res) => res.sendFile(path.join(`${__dirname}/../views/login.html`)));
+	app.get('/login', (req,res) => res.render('login'));
 
 	app.post('/login', passport.authenticate('local', 
 		{ 
@@ -73,7 +98,7 @@ const configure = (app, db) => {
 		}
 	));
 
-	app.get('/admin', ensureAuthenticated, (req,res) => res.sendFile(path.join(`${__dirname}/../views/admin.html`)));
+	app.get('/admin', ensureAuthenticated, (req,res) => res.render('admin'));
 
 	// route configuration
 
@@ -114,6 +139,7 @@ const configurePassport = (db) => {
 		})
 	);
 
+	//TODO: take out passwords (duh)
 	passport.serializeUser((user, done) => {
 		// console.log("serializing", user);
 		done(null, user)
