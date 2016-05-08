@@ -1,0 +1,14 @@
+body {
+	background:#fff;
+	width:100vw;
+	height:100vh;
+	color: #000;
+
+	#login {
+		h1 { color: #000 }
+		& > div {
+			max-width: 60%;
+			margin: 0 auto;
+		}
+	}
+}
