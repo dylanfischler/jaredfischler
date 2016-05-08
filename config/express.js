@@ -107,6 +107,8 @@ const configure = (app, db) => {
 		console.log('app listening on port 3000');
 	}
 	if(process.env.NODE_ENV == 'production'){
+		let IP = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+		let PORT = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 		app.listen(PORT, IP);
 	}
 
