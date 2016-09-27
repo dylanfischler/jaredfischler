@@ -1,8 +1,8 @@
 {
 	"username": "jaredfischler", 
-	"password": "",
+	"password": "$2a$04$o6GdDhgzF.a9LPpzRABAJuE6Fwesm9pFvFTPyoNpy41tffvfGzNku",
 	"bio": {
-		"intro": "I am an artist training in the fields of motion graphics and 3D visualization.",
+		"intro": "I am an artist in the field of 3D visualization.",
 		"sub_intro": "Here is my work."
 	},
 	"video_reel": "<iframe src='https://player.vimeo.com/video/149337788' width='1280' height='719' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href='https://vimeo.com/149337788'>Demo Reel Year of 2015</a> from <a href='https://vimeo.com/jaredfischler'>Jared Fischler</a> on <a href='https://vimeo.com'>Vimeo</a>.</p>",
@@ -11,15 +11,11 @@
 		"items": [
 			{
 				"title": "Bachelor of Arts",
-				"content": "Digital Media &amp; Design"
+				"content": "Digital Media & Design"
 			},
 			{ 
-				"title": "Concentration 1",
-				"content": "2D Animation &amp; Motion Graphics"
-			},
-			{
-				"title": "Concentration 2",
-				"content": "3D Animation &amp; Visualization"
+				"title": "Focus",
+				"content": "2D Animation & Motion Graphics"
 			},
 			{
 				"title": "Cumulative GPA",
