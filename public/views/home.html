@@ -55,8 +55,8 @@
         <div class="me_img"></div>
     </div>
     <div class="bio_content">
-        <h1>{{userData.bio.intro}}</h1>
-        <h2>{{userData.bio.sub_intro}}</h2>
+        <h1>{{userDetails.intro}}</h1>
+        <h2>{{userDetails.subintro}}</h2>
     </div>
 </section>
 
@@ -76,7 +76,7 @@
 <section id="projects">
     <div class="title">Projects</div>
     <div class="row">
-            <div class="project_cat col-lg-4 col-md-6 col-sm-12" bg-img="{{category.imgPath}}" ng-repeat="category in categories" ng-click="changeView(category.route)">
+            <div class="project_cat col-lg-4 col-md-6 col-sm-12" bg-img="{{category.image_path}}" ng-repeat="category in categories" ng-click="changeView(category.route)">
                 <div class="titleOverlay">
                     <div class="c_title"><h2>{{category.title}}</h2></div>
                 </div>
@@ -89,11 +89,11 @@
 <section id="education">
     <div class="title">Education</div>
     <div class="content">
-        <h3>{{userData.education.school}}</h3>
+        <h3>{{userDetails.school}}</h3>
         <br />
-        <span ng-repeat="ed_item in userData.education.items">
-            <h3>{{ed_item.title}}</h3>
-            <h4>{{ed_item.content}}</h4>
+        <span ng-repeat="item in userResume | keyIs:'section':'Education'">
+            <h3>{{item.title}}</h3>
+            <span ng-bind-html="item.content | trust"></span>
         </span>
     </div>
     
@@ -104,9 +104,9 @@
 <section id="skills">
     <div class="title">skills</div>
     <div class="content">
-        <span ng-repeat="skill_item in userData.skills.items">
-            <h3>{{skill_item.title}}</h3>
-            <h4>{{skill_item.content}}</h4>
+        <span ng-repeat="item in userResume | keyIs:'section':'Skills'">
+            <h3>{{item.title}}</h3>
+            <span ng-bind-html="item.content | trust"></span>
         </span>
     </div>
 </section>
@@ -116,9 +116,9 @@
 <section id="contact">
     <div class="title">Contact</div>
     <div class="row">
-        <span ng-repeat="cont_item in userData.contact.items">
-            <h2>{{cont_item.title}}:</h2>
-            <a ng-href="{{cont_item.link}}" target="_new">{{cont_item.link_title}}</a>
+        <span ng-repeat="item in userResume | keyIs:'section':'Contact'">
+            <h2>{{item.title}}:</h2>
+            <span ng-bind-html="item.content | trust"></span>
         </span>
     </div>
 </section> 

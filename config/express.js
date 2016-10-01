@@ -19,12 +19,14 @@ var fs = require('fs'),
 	flash = require('connect-flash'),
 	consolidate = require('consolidate'),
 	path = require('path'),
-	mongoClient = require('mongodb').MongoClient,
-	ObjectID = require('mongodb').ObjectID,
+	// mongoClient = require('mongodb').MongoClient,
+	// ObjectID = require('mongodb').ObjectID,
 	bcryptjs = require('bcryptjs'),
 	passport = require('passport'),
-	path = require('path');
+	path = require('path'),
+	mysql = require('mysql');
 
+let dbUtil = require('../utils/db');
 
 let LocalStrategy = require('passport-local').Strategy;
 
@@ -40,6 +42,7 @@ const configure = (app, db) => {
 	/* Data Dependencies */
 	let categories = require('../data/categories')(db);
 	let projects = require('../data/projects')(db);
+	let users = require('../data/users')(db);
 
 	// configure the application
 	app.use(bodyParser.urlencoded({extended: true}));
@@ -90,15 +93,23 @@ const configure = (app, db) => {
 	});
 
 	app.get("/personal_details", (req,res) => {
-		db.collection("users").findOne({}, (err, user) => {
-			if(err) return res.send(err);
-			else {
-				delete user.password; delete user._id;
-				return res.send(user);
-			}
-		})
+		users.personal_details().then(
+			(details) => {
+				res.send(details);
+			},
+			(err) => res.send(err)
+		);
+
+		// db.collection("users").findOne({}, (err, user) => {
+		// 	if(err) return res.send(err);
+		// 	else {
+		// 		delete user.password; delete user._id;
+		// 		return res.send(user);
+		// 	}
+		// })
 	});
 
+	/*
 	app.post("/personal_details", ensureAuthenticated, (req,res) => {
 		if(!req.body.user) res.send("No user object provided");
 		else {
@@ -112,6 +123,7 @@ const configure = (app, db) => {
 			})
 		}
 	});
+	*/
 
 	app.get('/login', (req,res) => res.render('login'));
 
@@ -184,26 +196,44 @@ const configurePassport = (db) => {
 
 module.exports = function() {
 	// init express app
-	var app = express();
+	let app = express();
+	let pool;
 
-	//define some env variables
-    var DB_URL;
+	const dbConfigBuffer = fs.readFileSync('./config/db_config.json');
+	let dbConfig = JSON.parse(dbConfigBuffer.toString());
 
-    if(process.env.NODE_ENV == 'development'){
-    	DB_URL = 'mongodb://localhost:27017/jaredfischler';
-    }
-    else if(process.env.NODE_ENV == 'production'){
-    	// DB_URL = `mongodb://${process.env.OPENSHIFT_MONGODB_DB_HOST}:${process.env.OPENSHIFT_MONGODB_DB_PORT}/`;
-    	DB_URL = 'mongodb://localhost:27017/jaredfischler';
-    }
-    else return console.error("NODE_ENV not set, http process not started.");
+	console.log(dbConfig)
 
-    mongoClient.connect(DB_URL, (err, db) => {
-    	if (err) {
-    		console.log('Could not connect to database', err.message);
-    	} else {
-    		console.log('Successfully connected to database');
-    		return configure(app, db);
-    	}
-    });
+	if(dbConfig){
+		pool = mysql.createPool(dbConfig);
+	} else {
+		console.error("Invalid or non-existant DB config");
+		process.exit(0);
+	}
+
+	var db = dbUtil(pool);
+
+	return configure(app, db);
+
+
+	// //define some env variables
+ //    var DB_URL;
+
+ //    if(process.env.NODE_ENV == 'development'){
+ //    	DB_URL = 'mongodb://localhost:27017/jaredfischler';
+ //    }
+ //    else if(process.env.NODE_ENV == 'production'){
+ //    	// DB_URL = `mongodb://${process.env.OPENSHIFT_MONGODB_DB_HOST}:${process.env.OPENSHIFT_MONGODB_DB_PORT}/`;
+ //    	DB_URL = 'mongodb://localhost:27017/jaredfischler';
+ //    }
+ //    else return console.error("NODE_ENV not set, http process not started.");
+
+ //    mongoClient.connect(DB_URL, (err, db) => {
+ //    	if (err) {
+ //    		console.log('Could not connect to database', err.message);
+ //    	} else {
+ //    		console.log('Successfully connected to database');
+ //    		return configure(app, db);
+ //    	}
+ //    });
 };

@@ -2,10 +2,11 @@ module.exports = function(db){
 	return {
 		all: function(){
 			return new Promise((resolve, reject) => {
-				db.collection('categories').find({}).toArray((err, categories) => {
-					if(err) reject(err);
-					else resolve(categories);
-				});
+				db.query({ query: "SELECT * FROM category" }).then((result) => {
+					resolve(result);
+				}).catch((err) => {
+					reject(err);
+				})
 			});
 		}
 	};

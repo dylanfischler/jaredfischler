@@ -1,5 +1,24 @@
 var app = angular.module("jayrad", ["ngRoute", "ngTouch", "ngAnimate"]);
 
+app.filter("trust", ['$sce', function($sce) {
+  return function(htmlCode){
+    return $sce.trustAsHtml(htmlCode);
+  }
+}]);
+
+app.filter('keyIs', function() {
+  return function(items, key, val) {
+        var filtered = [];
+        for(var i in items) {
+        	if(items[i][key] === val) {
+        		filtered.push(items[i]);
+        	}
+        }
+
+        return filtered;
+    };
+});
+
 // data 
 // var categories = [
 // 	{
