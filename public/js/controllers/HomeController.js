@@ -3,8 +3,11 @@ app.controller("HomeController", function($scope, $routeParams, $location, $http
 	$scope.nav = false;
 
     $http.get("/personal_details").then(function(res){
-        $scope.userData = res.data;
-        $scope.video_embed = $sce.trustAsHtml(res.data.video_reel);
+        console.log("res",res);
+        $scope.userDetails = res.data.user_details;
+        $scope.userResume = res.data.user_resume;
+
+        $scope.video_embed = $sce.trustAsHtml(res.data.user_details.video_reel);
     }, function(err){
         console.error(err);
     });
@@ -14,6 +17,10 @@ app.controller("HomeController", function($scope, $routeParams, $location, $http
     	anchorSmoothScroll.scrollTo(id, 50);
     	$scope.nav = false;
     	$("button.triggerNav").removeClass("ion-ios-close-empty").addClass("ion-navicon");
+    }
+
+    $scope.safelyBindHTML = function(html) {
+        return "<div>hello</div>";
     }
 
     $scope.toggleNav = function(){
