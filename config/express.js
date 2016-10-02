@@ -101,31 +101,7 @@ const configure = (app, db) => {
 			},
 			(err) => res.send(err)
 		);
-
-		// db.collection("users").findOne({}, (err, user) => {
-		// 	if(err) return res.send(err);
-		// 	else {
-		// 		delete user.password; delete user._id;
-		// 		return res.send(user);
-		// 	}
-		// })
 	});
-
-	/*
-	app.post("/personal_details", ensureAuthenticated, (req,res) => {
-		if(!req.body.user) res.send("No user object provided");
-		else {
-			db.collection("users").findOneAndUpdate({ _id: new ObjectID(req.user._id)}, { $set: req.body.user }, { 'returnOriginal': false }, (err, result) => {
-				if(err) return res.send(err);
-				else {
-					delete result.value.password;
-					delete result.value._id;
-					return res.send(result);
-				}
-			})
-		}
-	});
-	*/
 
 	app.get('/login', (req,res) => res.render('login'));
 
@@ -216,26 +192,4 @@ module.exports = function() {
 	var db = dbUtil(pool);
 
 	return configure(app, db);
-
-
-	// //define some env variables
- //    var DB_URL;
-
- //    if(process.env.NODE_ENV == 'development'){
- //    	DB_URL = 'mongodb://localhost:27017/jaredfischler';
- //    }
- //    else if(process.env.NODE_ENV == 'production'){
- //    	// DB_URL = `mongodb://${process.env.OPENSHIFT_MONGODB_DB_HOST}:${process.env.OPENSHIFT_MONGODB_DB_PORT}/`;
- //    	DB_URL = 'mongodb://localhost:27017/jaredfischler';
- //    }
- //    else return console.error("NODE_ENV not set, http process not started.");
-
- //    mongoClient.connect(DB_URL, (err, db) => {
- //    	if (err) {
- //    		console.log('Could not connect to database', err.message);
- //    	} else {
- //    		console.log('Successfully connected to database');
- //    		return configure(app, db);
- //    	}
- //    });
 };
