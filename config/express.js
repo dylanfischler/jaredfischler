@@ -88,7 +88,9 @@ const configure = (app, db) => {
 		} 
 		//no parameters
 		else {
-			res.send(projects.allProjects());	
+			projects.allProjects().then((results) => {
+				res.send(results);
+			}).catch((err) => res.send(err));
 		}
 	});
 
