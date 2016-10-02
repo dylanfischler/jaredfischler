@@ -12,8 +12,9 @@ app.controller("ProjectController", ['$scope', '$http', '$routeParams', '$sce',
 			//verify html embed 
 			$scope.project.html = $sce.trustAsHtml($scope.project.html);
 			if($scope.project.addHtml){
+				// debugger;
 				for(var i = 0; i < $scope.project.addHtml.length; i++){
-					$scope.project.addHtml[i] = $sce.trustAsHtml($scope.project.addHtml[i]);
+					$scope.project.addHtml[i] = $sce.trustAsHtml($scope.project.addHtml[i].html);
 				}
 			}
 			

@@ -7,20 +7,20 @@
 		<p>{{project.desc}}</p>
 	</div>
 	<div class="mainContent">
-		<div class="landscapeImg htmlEmbed" ng-show="project.mainType == 'landscapeImage' || project.mainType == 'htmlEmbed'">
-			<a target="_new" ng-href="includes/project_images/{{project.id}}.jpg"><img ng-show="project.mainType == 'landscapeImage'" ng-src="includes/project_images/{{project.id}}.jpg"/></a>
+		<div class="landscapeImg htmlEmbed" ng-show="project.head_type == 1 || project.head_type == 2">
+			<a target="_new" ng-href="includes/project_images/{{project.id}}.jpg"><img ng-show="project.head_type == 1" ng-src="includes/project_images/{{project.id}}.jpg"/></a>
 			
-			<div class="vim_wrap" ng-show="project.mainType == 'htmlEmbed'">
+			<div class="vim_wrap" ng-show="project.head_type == 2">
 				<div class="theEmbed" ng-bind-html="project.html"></div>
 			</div>
 		</div>
-		<div class="portraitImg" ng-show="project.mainType == 'portraitImage'">
+		<div class="portraitImg" ng-show="project.head_type == 3">
 			<a target="_new" ng-href="includes/project_images/{{project.id}}.jpg"><img ng-src="includes/project_images/{{project.id}}.jpg"/></a>
 		</div>
 
 		<!-- additional images -->
 		<div class="landscapeImg additional" ng-repeat="image in project.addImgs">
-			<a target="_new" ng-href="includes/project_images/{{image}}.jpg"><img ng-src="includes/project_images/{{image}}.jpg"/></a>
+			<a target="_new" ng-href="{{image.image_path}}.jpg"><img ng-src="{{image.image_path}}.jpg"/></a>
 		</div>
 
 		<!-- additional html embeds -->

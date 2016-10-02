@@ -71,7 +71,7 @@ app.config(['$routeProvider', '$locationProvider',
 
 		//category routes
 		angular.forEach(categories, function(value, key){
-			$routeProvider.when("/"+value.route, {templateUrl: "views/category.html", controller: 'CategoryController', resolve: {
+			$routeProvider.when("/"+value.category_id, {templateUrl: "views/category.html", controller: 'CategoryController', resolve: {
 				category: function(){ return value }
 			}});
 		});
