@@ -43,7 +43,7 @@ module.exports = function(db){
 
 		allProjects: function(){
 			return new Promise((resolve, reject) => {
-				db.query({ query: "SELECT * FROM project" }).then((result) => {
+				db.query({ query: "SELECT * FROM project ORDER BY project_id DESC" }).then((result) => {
 					var resolvedResult = db.resolveBuffers(result);
 					resolve(resolvedResult);
 				}).catch((err) => {
