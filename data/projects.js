@@ -2,7 +2,7 @@ module.exports = function(db){
 	return {
 		projectsByCategory: function(reqCat){
 			return new Promise((resolve, reject) => {
-				let query = "SELECT * FROM project WHERE cat_id=?";
+				let query = "SELECT * FROM project WHERE cat_id=? ORDER BY project_id DESC";
 				let vals = [reqCat];
 				db.query({ query, vals }).then((result) => {
 					var resolvedResult = db.resolveBuffers(result);
